@@ -1,0 +1,22 @@
+.header {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+
+  flex-direction: row;
+  padding: 20px 80px;
+  margin: 10px;
+  font-size: 20px;
+
+
+  .item {
+    margin: 20px;
+
+    &:hover {
+      opacity: 0.8;
+      background-color: bisque;
+    }
+  }
+}

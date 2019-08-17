@@ -24,3 +24,8 @@ yarn-error.log*
 
 .idea
 .idea/housing-company.iml
+
+
+.sass-cache/
+*css
+*styles.css.map
