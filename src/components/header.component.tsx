@@ -3,6 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import "./header.styles.scss";
+import { ButtonStyles } from "./own-button.styles";
 
 const Header = () => (
   <div className="header">
@@ -21,6 +22,7 @@ const Header = () => (
     <Link to="/signin">
       <div className="item">this is signin</div>
     </Link>
+    <ButtonStyles> SIGN IN </ButtonStyles>
   </div>
 );
 
