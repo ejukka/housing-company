@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import "./header.styles.scss";
-import { ButtonStyles } from "./own-button.styles";
+import OwnButton from "./own-button.component";
 
 const Header = () => (
   <div className="header">
@@ -11,18 +11,18 @@ const Header = () => (
       <div className="item">this is logo</div>
     </Link>
     <Link to="/apartments">
-      <div className="item">this is apartments</div>
+      <div className="item">apartments</div>
     </Link>
     <Link to="/history">
-      <div className="item">this is history</div>
+      <div className="item">history</div>
     </Link>
     <Link to="/about">
-      <div className="item">this is more-info</div>
+      <div className="item">about</div>
     </Link>
     <Link to="/signin">
-      <div className="item">this is signin</div>
+      <div className="item">sign in</div>
     </Link>
-    <ButtonStyles> SIGN IN </ButtonStyles>
+    <OwnButton> SIGN IN </OwnButton>
   </div>
 );
 
