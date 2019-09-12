@@ -1,5 +1,13 @@
 import React from "react";
 import { ListGroup } from "react-bootstrap";
+import { withGoogleMap, GoogleMap } from "react-google-maps";
+
+const GoogleMapResult = withGoogleMap(props => (
+  <GoogleMap
+    defaultCenter={{ lat: 60.3624643, lng: 24.3637589 }}
+    defaultZoom={13}
+  ></GoogleMap>
+));
 
 const AboutPage = () => (
   <div className="container">
@@ -38,6 +46,12 @@ const AboutPage = () => (
         </a>
       </ListGroup.Item>
     </ListGroup>
+    <div>
+      <GoogleMapResult
+        containerElement={<div style={{ height: `500px`, width: "500px" }} />}
+        mapElement={<div style={{ height: `100%` }} />}
+      />
+    </div>
   </div>
 );
 
