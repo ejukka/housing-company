@@ -2,28 +2,39 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
-import "./header.styles.scss";
+// import "./header.styles.scss";
 import OwnButton from "./own-button.component";
+import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 
 const Header = () => (
-  <div className="header">
-    <Link to="/">
-      <div className="item">this is logo</div>
-    </Link>
-    <Link to="/apartments">
-      <div className="item">apartments</div>
-    </Link>
-    <Link to="/history">
-      <div className="item">history</div>
-    </Link>
-    <Link to="/about">
-      <div className="item">about</div>
-    </Link>
-    <Link to="/signin">
-      <div className="item">sign in</div>
-    </Link>
-    <OwnButton> SIGN IN </OwnButton>
-  </div>
+  <Container>
+    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Navbar.Brand href="/">Housing company</Navbar.Brand>
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Collapse id="responsive-navbar-nav">
+        <Nav className="mr-auto">
+          <Nav.Link href="/apartments">apartments</Nav.Link>
+          <Nav.Link href="/history">history</Nav.Link>
+          <Nav.Link href="/about">about</Nav.Link>
+          <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
+            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+            <NavDropdown.Item href="#action/3.2">
+              Another action
+            </NavDropdown.Item>
+            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+            <NavDropdown.Divider />
+            <NavDropdown.Item href="#action/3.4">
+              Separated link
+            </NavDropdown.Item>
+          </NavDropdown>
+        </Nav>
+        <Nav>
+          <Nav.Link href="#deets">More details</Nav.Link>
+          <OwnButton> SIGN IN </OwnButton>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
+  </Container>
 );
 
 export default Header;

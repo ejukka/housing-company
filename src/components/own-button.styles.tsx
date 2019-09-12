@@ -3,12 +3,14 @@ import styled from "styled-components";
 export const ButtonStyles = styled.div`
   background-color: black;
   color: white;
-  font-size: 20px;
+  font-size: 15px;
   width: 100px;
-  height: 50px;
+  height: 20px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  // align-items: center;
+  // justify-content: center;
+  margin-top: 10px;
+  margin-left: 10px;
 
   &:hover {
     background-color: white;

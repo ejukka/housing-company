@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import "./menu.styles.scss";
+import { Container } from "react-bootstrap";
+import Image from "react-bootstrap/Image";
 
 class Menu extends Component<{
   title: any;
@@ -11,20 +13,23 @@ class Menu extends Component<{
 }> {
   render() {
     const { title, imageUrl, size, history, linkUrl, match } = this.props;
+
     return (
-      <div
-        className={`${size} menu-item`}
-        onClick={() => history.push(`${match.url}${linkUrl}`)}
-      >
+      <Container>
         <div
-          className="background-image"
-          style={{ backgroundImage: `url(${imageUrl})` }}
-        />
-        <div className="content">
-          <h1 className="title">{title.toUpperCase()}</h1>
-          <span className="subtitle">WATCH</span>
+          className={`${size} menu-item`}
+          onClick={() => history.push(`${match.url}${linkUrl}`)}
+        >
+          <Image
+            className="background-image"
+            style={{ backgroundImage: `url(${imageUrl})` }}
+          ></Image>
+          <div className="content">
+            <h1 className="title">{title.toUpperCase()}</h1>
+            <span className="subtitle">WATCH</span>
+          </div>
         </div>
-      </div>
+      </Container>
     );
   }
 }

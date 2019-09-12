@@ -2,11 +2,11 @@ import React from "react";
 import Menu from "../../components/menu.component";
 
 const HomePage = () => (
-  <div className="home">
+  <div className="container">
     <Menu
       title="Housing company"
-      imageUrl="https://i.ibb.co/PZtstfP/image11.png"
-      size="200"
+      imageUrl="https://i.ibb.co/dtKXMzL/image1.png"
+      size="100"
       history=""
       linkUrl=""
       match=""
