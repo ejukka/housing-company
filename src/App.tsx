@@ -9,6 +9,7 @@ import AboutPage from "./pages/about/about.page";
 import SignIn from "./components/sign-in.component";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ApartmentsPage from "./pages/apartments/apartments.page";
+import HistoryPage from "./pages/history/history.page";
 
 class App extends React.Component {
   render() {
@@ -17,6 +18,7 @@ class App extends React.Component {
         <Router>
           <Header />
           <Route exact path="/" component={HomePage} />
+          <Route exact path="/history" component={HistoryPage} />
           <Route exact path="/about" component={AboutPage} />
           <Route exact path="/apartments" component={ApartmentsPage} />
           <Route exact path="/signin" component={SignIn} />
