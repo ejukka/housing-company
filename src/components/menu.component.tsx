@@ -26,7 +26,7 @@ class Menu extends Component<{
           ></Image>
           <div className="content">
             <h1 className="title">{title.toUpperCase()}</h1>
-            <span className="subtitle">WATCH</span>
+            <span className="subtitle">KATSO</span>
           </div>
         </div>
       </Container>

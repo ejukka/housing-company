@@ -4,24 +4,16 @@ import Menu from "../../components/menu.component";
 const HomePage = () => (
   <div className="container">
     <Menu
-      title="Housing company"
-      imageUrl="https://i.ibb.co/dtKXMzL/image1.png"
-      size="100"
+      title="As.oy Vihdin Mäkirinne 2"
+      imageUrl="https://i.postimg.cc/HsF3Mxsd/image1.jpg"
+      size="400"
       history=""
       linkUrl=""
       match=""
     />
     <Menu
-      title="test1"
-      imageUrl="https://i.ibb.co/Xzd51G7/image3.png"
-      size="100"
-      history=""
-      linkUrl=""
-      match=""
-    />
-    <Menu
-      title="test2"
-      imageUrl="https://i.ibb.co/Qk7wCg6/image41.png"
+      title="Vihdin Kunta"
+      imageUrl="https://i.postimg.cc/158J46Sv/image2.jpg"
       size="100"
       history=""
       linkUrl=""

@@ -8,6 +8,7 @@ import Header from "./components/header.component";
 import AboutPage from "./pages/about/about.page";
 import SignIn from "./components/sign-in.component";
 import "bootstrap/dist/css/bootstrap.min.css";
+import ApartmentsPage from "./pages/apartments/apartments.page";
 
 class App extends React.Component {
   render() {
@@ -17,6 +18,7 @@ class App extends React.Component {
           <Header />
           <Route exact path="/" component={HomePage} />
           <Route exact path="/about" component={AboutPage} />
+          <Route exact path="/apartments" component={ApartmentsPage} />
           <Route exact path="/signin" component={SignIn} />
         </Router>
       </div>
