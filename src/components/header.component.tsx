@@ -19,6 +19,12 @@ const Header = () => (
             <NavDropdown.Item href="https://www.rosknroll.fi/">
               Rosk & Roll
             </NavDropdown.Item>
+            <NavDropdown.Item href=" https://www.vihti.fi/vesihuoltolaitos/">
+              Vihdin Vesi
+            </NavDropdown.Item>
+            <NavDropdown.Item href="https://www.caruna.fi/palvelut/tuotteet-ja-hinnat/sahkonjakelun-hinta">
+              Caruna
+            </NavDropdown.Item>
             <NavDropdown.Item href="https://www.vihtiski.fi/">
               Vihti Ski
             </NavDropdown.Item>

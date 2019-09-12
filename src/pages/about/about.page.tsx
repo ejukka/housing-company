@@ -13,7 +13,7 @@ const AboutPage = () => (
   <div className="container">
     <div className="row">
       <div className="col-sm">Osoite</div>
-      <div className="col-sm">Rakennus vuosi</div>
+      <div className="col-sm">Rakennusvuosi</div>
       <div className="col-sm">Y-tunnus</div>
     </div>
     <div className="row">
@@ -23,26 +23,41 @@ const AboutPage = () => (
     </div>
     <br />
     <ListGroup>
-      <ListGroup.Item>Kaupparekisterissä vuodesta 2005</ListGroup.Item>
       <ListGroup.Item>
-        <a href="https://www.kauppalehti.fi/yritykset/yritys/asunto+oy+vihdin+makirinne+/19535312">
-          Kaupparekisteri
+        <a
+          target="_blank"
+          href="https://www.kauppalehti.fi/yritykset/yritys/asunto+oy+vihdin+makirinne+/19535312"
+        >
+          Kaupparekisteri ote
         </a>
       </ListGroup.Item>
-      <ListGroup.Item>Lankilanrinne, Lankilan Kylä</ListGroup.Item>
       <ListGroup.Item>
-        <a href="https://www.vihti.fi/wp-content/uploads/PERSEL-23.10.2012-WEB-N-160-Koillis-Lankila.pdf>">
+        <a target="_blank" href="https://www.vihti.fi/?s=lankila">
+          Lankila
+        </a>
+      </ListGroup.Item>
+      <ListGroup.Item>
+        <a
+          target="_blank"
+          href="https://www.vihti.fi/wp-content/uploads/PERSEL-23.10.2012-WEB-N-160-Koillis-Lankila.pdf"
+        >
           Koilis-Lankilan asemakaava
         </a>
       </ListGroup.Item>
       <ListGroup.Item>
-        <a href="https://ilmatieteenlaitos.fi/saa/vihti/lankilanrinne?forecast=daily&day=9">
+        <a
+          target="_blank"
+          href="https://ilmatieteenlaitos.fi/saa/vihti/lankilanrinne?forecast=daily&day=9"
+        >
           Lankilanrinteen säätiedot
         </a>
       </ListGroup.Item>
       <ListGroup.Item>
-        <a href="http://www.ojakkala.kylanetti.fi/index.php?page=Kylaen-esittely">
-          Ojakkala
+        <a
+          target="_blank"
+          href="http://www.ojakkala.kylanetti.fi/index.php?page=Kylaen-esittely"
+        >
+          Naapurikylä Ojakkala
         </a>
       </ListGroup.Item>
     </ListGroup>
