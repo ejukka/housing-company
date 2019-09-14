@@ -3,7 +3,6 @@ import "./menu.styles.scss";
 import { Container } from "react-bootstrap";
 import Image from "react-bootstrap/Image";
 import { withRouter } from "react-router-dom";
-import Video from "./video-component";
 
 class Menu extends Component<{
   title: any;
@@ -19,6 +18,8 @@ class Menu extends Component<{
 
   render() {
     const { title, imageUrl, size, history, linkUrl, match } = this.props;
+
+    console.log("API KEY: " + process.env.REACT_APP_GOOGLE_MAPS_KEY);
 
     return (
       <Container>

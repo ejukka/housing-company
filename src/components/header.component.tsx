@@ -3,6 +3,10 @@ import React from "react";
 import OwnButton from "./own-button.component";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 
+const config = {
+  apiKey: `${process.env.REACT_APP_FIREBASE_API_KEY}`
+};
+
 const Header = () => (
   <Container>
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
