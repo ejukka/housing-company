@@ -14,6 +14,7 @@ const middlewares = [sagaMiddleware];
 
 if (process.env.NODE_ENV === "development") {
   // @ts-ignore
+
   middlewares.push(reduxLogger);
 }
 export const store = createStore(rootReducer, applyMiddleware(...middlewares));

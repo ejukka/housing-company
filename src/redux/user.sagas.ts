@@ -1,24 +1,22 @@
-import { all, call, takeLatest } from "redux-saga/effects";
+import { all, call, put, takeLatest } from "redux-saga/effects";
 import UserTypes from "./user.types";
+import { signInFailure, signInSuccess } from "./user.action";
+import { auth, googleProvider } from "../firebase/firebase.utils";
 
 export function* signIn() {
-  yield console.log("sign in using google....");
+  try {
+    const { user } = yield auth.signInWithPopup(googleProvider);
+    yield console.log(user);
+    yield put(signInSuccess(user));
+  } catch (error) {
+    yield put(signInFailure(error));
+  }
 }
 
 export function* onSignInStart() {
   yield takeLatest(UserTypes.SIGN_iN_START, signIn);
 }
 
-export function* onSignInSuccess() {
-  yield takeLatest(UserTypes.SIGN_iN_SUCCESS, signIn);
-}
-
-export function* onSignInFailure() {
-  yield takeLatest(UserTypes.SIGN_iN_FAILURE, signIn);
-}
-
 export function* userSages() {
-  yield all([
-    (call(onSignInStart), call(onSignInSuccess), call(onSignInFailure))
-  ]);
+  yield all([call(onSignInStart)]);
 }

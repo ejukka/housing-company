@@ -15,12 +15,13 @@ const userReducer = (state = INITIAL_STATE, action: any) => {
     case UserTypes.SIGN_iN_SUCCESS:
       return {
         ...state,
-        currentUser: null,
+        currentUser: action.payload,
         error: null
       };
     case UserTypes.SIGN_iN_FAILURE:
       return {
         ...state,
+        currentUser: null,
         error: action.payload
       };
     default:
