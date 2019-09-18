@@ -31,3 +31,4 @@ yarn-error.log*
 *styles.css.map
 
 .env
+public/script.js

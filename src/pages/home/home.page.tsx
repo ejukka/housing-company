@@ -1,6 +1,5 @@
 import React from "react";
 import Menu from "../../components/menu.component";
-import Video from "../../components/video-component";
 
 const HomePage = () => (
   <div className="container">

@@ -2,30 +2,18 @@ import firebase from "firebase/app";
 import "firebase/firestore";
 import "firebase/auth";
 
-const {
-  API_KEY,
-  AUTH_DOMAIL,
-  DATABSE_URL,
-  PROJECT_ID,
-  STORAGE_BUCKET,
-  MESSAGGIGN_SENDER_ID,
-  APP_ID
-} = process.env;
-
-const key = process.env.API_KEY;
-console.log("key: ", key);
-
 const config = {
-  apiKey: "test",
-  authDomain: AUTH_DOMAIL,
-  databaseURL: DATABSE_URL,
-  projectId: PROJECT_ID,
-  storageBucket: STORAGE_BUCKET,
-  messagingSenderId: MESSAGGIGN_SENDER_ID,
-  appId: APP_ID
+  apiKey: `${process.env.REACT_APP_API_KEY}`,
+  authDomain: `${process.env.AREACT_APP_UTH_DOMAIL}`,
+  databaseURL: `${process.env.REACT_APP_DATABSE_URL}`,
+  projectId: `${process.env.REACT_APP_PROJECT_ID}`,
+  storageBucket: `${process.env.REACT_APP_STORAGE_BUCKET}`,
+  messagingSenderId: `${process.env.REACT_APP_MESSAGGIGN_SENDER_ID}`,
+  appId: `${process.env.REACT_APP_APP_ID}`
 };
 
 console.log("config: ", config);
+console.log("config: ", process.env);
 
 firebase.initializeApp(config);
 export const auth = firebase.auth();
