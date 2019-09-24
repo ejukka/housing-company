@@ -13,3 +13,7 @@ export const signInFailure = (error: string) => ({
   type: UserTypes.SIGN_iN_FAILURE,
   payload: error
 });
+
+export const checkIsUserLoggedIn = () => ({
+  type: UserTypes.CHECK_IS_USER_LOGGED_IN
+});

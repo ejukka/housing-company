@@ -11,7 +11,16 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import ApartmentsPage from "./pages/apartments/apartments.page";
 import HistoryPage from "./pages/history/history.page";
 
+import { checkIsUserLoggedIn } from "./redux/user.action";
+import { connect } from "react-redux";
+
 class App extends React.Component {
+  componentDidMount(): void {
+    // @ts-ignore
+    const { checkIsUserLoggedIn } = this.props;
+    checkIsUserLoggedIn();
+  }
+
   render() {
     return (
       <div>
@@ -28,4 +37,11 @@ class App extends React.Component {
   }
 }
 
-export default App;
+const mapDispatchToProps = (dispatch: any) => ({
+  checkIsUserLoggedIn: () => dispatch(checkIsUserLoggedIn())
+});
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(App);
