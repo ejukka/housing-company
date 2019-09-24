@@ -6,7 +6,7 @@ import { auth, googleProvider } from "../firebase/firebase.utils";
 export function* signIn() {
   try {
     const { user } = yield auth.signInWithPopup(googleProvider);
-    yield console.log(user);
+    console.log(user);
     yield put(signInSuccess(user));
   } catch (error) {
     yield put(signInFailure(error));
