@@ -24,11 +24,9 @@ const userReducer = (state = INITIAL_STATE, action: any) => {
         currentUser: null,
         error: action.payload
       };
-    case UserTypes.CHECK_IS_USER_LOGGED_IN:
-      return {
-        ...state,
-        currentUser: state.currentUser
-      };
+    case UserTypes.CHECK_IS_USER_LOGGED_IN: {
+      return state;
+    }
     default:
       return state;
   }

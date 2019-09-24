@@ -25,7 +25,11 @@ export function* isLogged() {
   try {
     const userAuth = yield getCurrentUser();
     console.log("is user logged in...", userAuth);
-    if (!userAuth) return;
+    if (!userAuth) {
+      return;
+    } else {
+      yield put(signInSuccess(userAuth));
+    }
   } catch (error) {
     console.log(error);
   }

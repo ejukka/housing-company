@@ -1,50 +1,72 @@
 import React from "react";
 
-import OwnButton from "./own-button.component";
-import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { Button, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { signInStart } from "../redux/user.action";
+import { connect } from "react-redux";
 
-const config = {
-  apiKey: `${process.env.REACT_APP_FIREBASE_API_KEY}`
-};
+class Header extends React.Component<{ signInStart: any; currentUser: any }> {
+  constructor(props: any) {
+    super(props);
+  }
 
-const Header = () => (
-  <Container>
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-      <Navbar.Brand href="/">Vihdin Mäkirinne 2</Navbar.Brand>
-      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-      <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav className="mr-auto">
-          <Nav.Link href="/apartments">Asunnot</Nav.Link>
-          <Nav.Link href="/history">historia</Nav.Link>
-          <NavDropdown title="Linkkejä" id="collasible-nav-dropdown">
-            <NavDropdown.Item href="https://www.vihti.fi/">
-              Vihdin Kunta
-            </NavDropdown.Item>
-            <NavDropdown.Item href="https://www.rosknroll.fi/">
-              Rosk & Roll
-            </NavDropdown.Item>
-            <NavDropdown.Item href=" https://www.vihti.fi/vesihuoltolaitos/">
-              Vihdin Vesi
-            </NavDropdown.Item>
-            <NavDropdown.Item href="https://www.caruna.fi/palvelut/tuotteet-ja-hinnat/sahkonjakelun-hinta">
-              Caruna
-            </NavDropdown.Item>
-            <NavDropdown.Item href="https://www.vihtiski.fi/">
-              Vihti Ski
-            </NavDropdown.Item>
-            <NavDropdown.Divider />
-            <NavDropdown.Item href="https://www.puuhapark.fi/">
-              Puuhapark
-            </NavDropdown.Item>
-          </NavDropdown>
-        </Nav>
-        <Nav>
-          <Nav.Link href="/about">Lisätietoa</Nav.Link>
-          <OwnButton href="/signin"> SIGN IN </OwnButton>
-        </Nav>
-      </Navbar.Collapse>
-    </Navbar>
-  </Container>
-);
+  render() {
+    const { signInStart, currentUser } = this.props;
+    console.log("CurrentUser: ", currentUser);
+    return (
+      <Container>
+        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+          <Navbar.Brand href="/">Vihdin Mäkirinne 2</Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="mr-auto">
+              <Nav.Link href="/apartments">Asunnot</Nav.Link>
+              <Nav.Link href="/history">historia</Nav.Link>
+              <NavDropdown title="Linkkejä" id="collasible-nav-dropdown">
+                <NavDropdown.Item href="https://www.vihti.fi/">
+                  Vihdin Kunta
+                </NavDropdown.Item>
+                <NavDropdown.Item href="https://www.rosknroll.fi/">
+                  Rosk & Roll
+                </NavDropdown.Item>
+                <NavDropdown.Item href=" https://www.vihti.fi/vesihuoltolaitos/">
+                  Vihdin Vesi
+                </NavDropdown.Item>
+                <NavDropdown.Item href="https://www.caruna.fi/palvelut/tuotteet-ja-hinnat/sahkonjakelun-hinta">
+                  Caruna
+                </NavDropdown.Item>
+                <NavDropdown.Item href="https://www.vihtiski.fi/">
+                  Vihti Ski
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="https://www.puuhapark.fi/">
+                  Puuhapark
+                </NavDropdown.Item>
+              </NavDropdown>
+            </Nav>
+            <Nav>
+              <Nav.Link href="/about">Lisätietoa</Nav.Link>
+              {currentUser ? (
+                <Button onClick={signInStart}>SIGN IN </Button>
+              ) : (
+                <Button onClick={signInStart}>SIGN OUT </Button>
+              )}
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
+      </Container>
+    );
+  }
+}
 
-export default Header;
+const mapStateToProps = (state: any) => ({
+  currentUser: state.user.currentUser
+});
+
+const mapDispatchToProps = (dispatch: any) => ({
+  signInStart: () => dispatch(signInStart())
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Header);
