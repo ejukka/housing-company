@@ -2,10 +2,7 @@ import userTypes from '../user.types';
 import SagaTester from 'redux-saga-tester';
 import { onSignInStart } from '../user.sagas';
 import { cloneableGenerator } from '@redux-saga/testing-utils';
-import {
-    auth,
-    googleProvider
-} from "../../firebase/firebase.utils";
+import firebase from "firebase";
 
 describe('start saga test', () => {
     let sagaTester = null;
@@ -26,19 +23,60 @@ describe('start saga test', () => {
         expect(sagaTester.wasCalled(userTypes.SIGN_iN_SUCCESS)).toEqual(false);
     });
 
-    it('should call Sign in start and sign in succesfull', async () => {
+    const signInWithPopup = jest.fn(() => {
+        return Promise.resolve('result of signInWithPopup');
+    });
+
+    const GoogleAuthProvider = jest.fn(() => {
+        return Promise.resolve('result of GoogleAuthProvider');
+    });
+
+    it('should call Sign in start and sign in successful', async () => {
         await sagaTester.dispatch({
             type: userTypes.SIGN_iN_START,
         });
 
-        // jest.mock('auth');
-        // jest.mock('googleProvider');
-        // await auth.signInWithPopup(googleProvider).mockResolvedValue({test: test});
+        jest.spyOn(firebase, 'initializeApp')
+            .mockImplementation(() => {
+                return {
+                    auth: () => {
+                        return {
+                            signInWithPopup,
+                        }
+                    }
+                };
+            });
+
+        jest.spyOn(firebase, 'auth')
+            .mockImplementation(() => {
+                return {
+                    GoogleAuthProvider,
+                    currentUser: {
+                        displayName: 'testName',
+                        email: 'test@test.com',
+                        emailVerified: true
+                    },
+                }
+            });
+
+        // jest.mock('firebase/auth', () => ({
+        //         signInWithPopup: jest.fn(() => (Promise.resolve({loading: false, error: false, data: {currentUser: "test"}}))),
+        // }));
+
+        // jest.mock('firebase/auth');
+        //
+        // let mockAuth = jest.fn();
+        // const authReturnValue = 'auth';
+        // mockAuth.mockReturnValueOnce(authReturnValue);
+        // firebase.auth = mockAuth;
 
         await sagaTester.waitFor(userTypes.SIGN_iN_FAILURE);
+        // expect(firebase.auth).toHaveBeenCalled();
+        // expect(mockAuth.mock.calls.length).toBe(1);
+        // expect(firebase.auth.GoogleAuthProvider).toHaveBeenCalled();
         expect(sagaTester.wasCalled(userTypes.SIGN_iN_START)).toEqual(true);
-        expect(sagaTester.wasCalled(userTypes.SIGN_iN_FAILURE)).toEqual(true);
-        expect(sagaTester.wasCalled(userTypes.SIGN_iN_SUCCESS)).toEqual(false);
+        expect(sagaTester.wasCalled(userTypes.SIGN_iN_FAILURE)).toEqual(false);
+        expect(sagaTester.wasCalled(userTypes.SIGN_iN_SUCCESS)).toEqual(true);
     });
 
     it('should call Sign in start and sign in is succesfull', async () => {
