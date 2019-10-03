@@ -2,14 +2,20 @@ import userTypes from '../user.types';
 import SagaTester from 'redux-saga-tester';
 import { onSignInStart } from '../user.sagas';
 import { cloneableGenerator } from '@redux-saga/testing-utils';
-import firebase from "firebase";
 import mocksdk from "firebase-mock";
-import {auth} from "../../firebase/firebase.utils";
+import "firebase/auth";
+import * as firebase from 'firebase';
+import 'firebase/firestore';
+// jest.mock('firebase');
+// jest.mock('firebase/app');
+// jest.mock('firebase/auth');
+// jest.mock('firebase/firestore');
 
 describe('start saga test', () => {
     let sagaTester = null;
 
     beforeEach(() => {
+        // firebase.mockClear();
         sagaTester = new SagaTester({});
         sagaTester.start(onSignInStart);
     });
@@ -26,17 +32,6 @@ describe('start saga test', () => {
     });
 
     it('should call Sign in start and sign in successful', async () => {
-
-        jest.mock('firebase/app', () => {
-            return mocksdk.MockFirebase();
-        });
-
-        jest.mock('firebase/auth', () => {
-            GoogleAuthProvider: jest.fn(() => ({
-                login: 'test',
-            }))
-        });
-
         await sagaTester.dispatch({
             type: userTypes.SIGN_iN_START,
         });
