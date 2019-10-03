@@ -10,7 +10,7 @@ import {
 export function* signIn() {
   try {
     console.log("testing...");
-    console.log("auth...", auth);
+    // console.log("auth...", auth);
     const { user } = yield auth.signInWithPopup(googleProvider);
     console.log(user);
     yield put(signInSuccess(user));
