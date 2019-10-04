@@ -31,16 +31,16 @@ describe('start saga test', () => {
         expect(sagaTester.wasCalled(userTypes.SIGN_iN_SUCCESS)).toEqual(false);
     });
 
-    it('should call Sign in start and sign in successful', async () => {
-        await sagaTester.dispatch({
-            type: userTypes.SIGN_iN_START,
-        });
-
-        await sagaTester.waitFor(userTypes.SIGN_iN_FAILURE);
-        expect(sagaTester.wasCalled(userTypes.SIGN_iN_START)).toEqual(true);
-        expect(sagaTester.wasCalled(userTypes.SIGN_iN_FAILURE)).toEqual(false);
-        expect(sagaTester.wasCalled(userTypes.SIGN_iN_SUCCESS)).toEqual(true);
-    });
+    // it('should call Sign in start and sign in successful', async () => {
+    //     await sagaTester.dispatch({
+    //         type: userTypes.SIGN_iN_START,
+    //     });
+    //
+    //     await sagaTester.waitFor(userTypes.SIGN_iN_FAILURE);
+    //     expect(sagaTester.wasCalled(userTypes.SIGN_iN_START)).toEqual(true);
+    //     expect(sagaTester.wasCalled(userTypes.SIGN_iN_FAILURE)).toEqual(false);
+    //     expect(sagaTester.wasCalled(userTypes.SIGN_iN_SUCCESS)).toEqual(true);
+    // });
 
     it('should call Sign in start and sign in is succesfull', async () => {
         const gen = cloneableGenerator(onSignInStart)();
