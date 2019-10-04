@@ -14,6 +14,20 @@ export const signInFailure = (error: string) => ({
   payload: error
 });
 
+export const signOutStart = () => ({
+  type: UserTypes.SIGN_OUT_START
+});
+
+export const signOutSuccess = (user: {}) => ({
+  type: UserTypes.SIGN_OUT_SUCCESS,
+  payload: user
+});
+
+export const signOutFailure = (error: string) => ({
+  type: UserTypes.SIGN_OUT_FAILURE,
+  payload: error
+});
+
 export const checkIsUserLoggedIn = () => ({
   type: UserTypes.CHECK_IS_USER_LOGGED_IN
 });

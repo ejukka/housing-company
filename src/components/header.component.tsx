@@ -1,16 +1,16 @@
 import React from "react";
 
 import { Button, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
-import { signInStart } from "../redux/user.action";
+import { signInStart, signOutStart } from "../redux/user.action";
 import { connect } from "react-redux";
 
-class Header extends React.Component<{ signInStart: any; currentUser: any }> {
+class Header extends React.Component<{ signInStart: any; signOutStart:any; currentUser: any }> {
   constructor(props: any) {
     super(props);
   }
 
   render() {
-    const { signInStart, currentUser } = this.props;
+    const { signInStart, signOutStart, currentUser } = this.props;
     console.log("CurrentUser: ", currentUser);
     return (
       <Container>
@@ -45,10 +45,10 @@ class Header extends React.Component<{ signInStart: any; currentUser: any }> {
             </Nav>
             <Nav>
               <Nav.Link href="/about">Lisätietoa</Nav.Link>
-              {currentUser ? (
+              {!currentUser ? (
                 <Button onClick={signInStart}>SIGN IN </Button>
               ) : (
-                <Button onClick={signInStart}>SIGN OUT </Button>
+                <Button onClick={signOutStart}>SIGN OUT </Button>
               )}
             </Nav>
           </Navbar.Collapse>
@@ -63,7 +63,8 @@ const mapStateToProps = (state: any) => ({
 });
 
 const mapDispatchToProps = (dispatch: any) => ({
-  signInStart: () => dispatch(signInStart())
+  signInStart: () => dispatch(signInStart()),
+  signOutStart: () => dispatch(signOutStart())
 });
 
 export default connect(
