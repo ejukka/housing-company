@@ -23,7 +23,7 @@ class Header extends React.Component<{
   }
 
   render() {
-    const config = {
+    const text = {
       headerText: `${process.env.REACT_APP_APP_headerText}`,
       headerTextAdmin: `${process.env.REACT_APP_APP_headerTextAdmin}`,
       link1: `${process.env.REACT_APP_APP_link1}`,
@@ -45,7 +45,7 @@ class Header extends React.Component<{
       <Container>
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
           <Navbar.Brand href="/">
-            {this.getText(currentUser, config)}
+            {this.getText(currentUser, text)}
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
@@ -53,24 +53,24 @@ class Header extends React.Component<{
               <Nav.Link href="/apartments">Asunnot</Nav.Link>
               <Nav.Link href="/history">historia</Nav.Link>
               <NavDropdown title="Linkkejä" id="collasible-nav-dropdown">
-                <NavDropdown.Item href={config.link1} target="_blank">
-                  {config.link1Text}
+                <NavDropdown.Item href={text.link1} target="_blank">
+                  {text.link1Text}
                 </NavDropdown.Item>
-                <NavDropdown.Item href={config.link2} target="_blank">
-                  {config.link2Text}
+                <NavDropdown.Item href={text.link2} target="_blank">
+                  {text.link2Text}
                 </NavDropdown.Item>
-                <NavDropdown.Item href={config.link3} target="_blank">
-                  {config.link3Text}
+                <NavDropdown.Item href={text.link3} target="_blank">
+                  {text.link3Text}
                 </NavDropdown.Item>
-                <NavDropdown.Item href={config.link4} target="_blank">
-                  {config.link4Text}
+                <NavDropdown.Item href={text.link4} target="_blank">
+                  {text.link4Text}
                 </NavDropdown.Item>
-                <NavDropdown.Item href={config.link5} target="_blank">
-                  {config.link5Text}
+                <NavDropdown.Item href={text.link5} target="_blank">
+                  {text.link5Text}
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href={config.link6} target="_blank">
-                  {config.link6Text}
+                <NavDropdown.Item href={text.link6} target="_blank">
+                  {text.link6Text}
                 </NavDropdown.Item>
               </NavDropdown>
             </Nav>
