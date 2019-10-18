@@ -15,6 +15,24 @@
 - REACT_APP_MESSAGGIGN_SENDER_ID=test,
 - REACT_APP_APP_ID=test
 
+
+##### Configure also following texts to your .evn file:
+- REACT_APP_APP_headerText='Housing company name'
+- REACT_APP_APP_headerTextAdmin='ADMIN - Housing company name- ADMIN'
+
+- REACT_APP_APP_link1Text='First link'
+- REACT_APP_APP_link1='https://duckduckgo.com/'
+- REACT_APP_APP_link2Text='Second link'
+- REACT_APP_APP_link2='https://duckduckgo.com/'
+- REACT_APP_APP_link3Text='Third link'
+- REACT_APP_APP_link3='https://duckduckgo.com/'
+- REACT_APP_APP_link4Text='Fourth link'
+- REACT_APP_APP_link4='https://duckduckgo.com/'
+- REACT_APP_APP_link5Text='Fifth link'
+- REACT_APP_APP_link5='https://duckduckgo.com/'
+- REACT_APP_APP_link6Text='Six link'
+- REACT_APP_APP_link6='https://duckduckgo.com/'
+
 ## Create following script.js file to your public folder
 
 var script = document.createElement("script");
