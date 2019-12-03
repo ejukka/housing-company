@@ -52,8 +52,6 @@ exports[`Renders About page 1`] = `
       data-rb-event-key={null}
       disabled={false}
       onClick={[Function]}
-      role="tab"
-      tabIndex={-1}
     >
       <a
         href="https://www.kauppalehti.fi/yritykset/yritys/asunto+oy+vihdin+makirinne+/19535312"
@@ -67,8 +65,6 @@ exports[`Renders About page 1`] = `
       data-rb-event-key={null}
       disabled={false}
       onClick={[Function]}
-      role="tab"
-      tabIndex={-1}
     >
       <a
         href="https://www.vihti.fi/?s=lankila"
@@ -82,8 +78,6 @@ exports[`Renders About page 1`] = `
       data-rb-event-key={null}
       disabled={false}
       onClick={[Function]}
-      role="tab"
-      tabIndex={-1}
     >
       <a
         href="https://www.vihti.fi/wp-content/uploads/PERSEL-23.10.2012-WEB-N-160-Koillis-Lankila.pdf"
@@ -97,8 +91,6 @@ exports[`Renders About page 1`] = `
       data-rb-event-key={null}
       disabled={false}
       onClick={[Function]}
-      role="tab"
-      tabIndex={-1}
     >
       <a
         href="https://ilmatieteenlaitos.fi/saa/vihti/lankilanrinne?forecast=daily&day=9"
@@ -112,8 +104,6 @@ exports[`Renders About page 1`] = `
       data-rb-event-key={null}
       disabled={false}
       onClick={[Function]}
-      role="tab"
-      tabIndex={-1}
     >
       <a
         href="http://www.ojakkala.kylanetti.fi/index.php?page=Kylaen-esittely"

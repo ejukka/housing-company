@@ -1,29 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Renders About page 1`] = `
-<div
-  className="container"
->
-  <div
-    className="container"
-  >
-    <video
-      controls={true}
-      height="240"
-      hidden={false}
-      poster="talo1.png"
-      width="320"
-    >
-      <source
-        src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
-        type="video/mp4"
-      />
-      Your browser does not support the video tag.
-    </video>
-  </div>
-</div>
-`;
-
 exports[`Renders History page 1`] = `
 <div
   className="container"
