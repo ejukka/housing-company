@@ -9,15 +9,13 @@ class Menu extends Component<{
   imageUrl: any;
   size: any;
   history: any;
-  linkUrl: any;
-  match: any;
 }> {
   handleClick = (history: any) => {
     history.push("/apartments");
   };
 
   render() {
-    const { title, imageUrl, size, history, linkUrl, match } = this.props;
+    const { title, imageUrl, size, history } = this.props;
 
     console.log("API KEY: " + process.env.REACT_APP_GOOGLE_MAPS_KEY);
 

@@ -32,7 +32,7 @@ export function* signIn() {
     console.log(user);
     yield put(signInSuccess(user));
   } catch (error) {
-    console.log("Error occured: ", error);
+    console.log("Error occurred: ", error);
     yield put(signInFailure(error));
   }
 }

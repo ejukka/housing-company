@@ -5,10 +5,13 @@ import { Container } from "react-bootstrap";
 const ApartmentsPage = () => (
   <Container>
     <Carousel
-      showArrows={true}
-      showStatus={true}
-      infiniteLoop={true}
-      autoPlay={true}
+      showArrows
+      showStatus
+      infiniteLoop
+      autoPlay
+      showIndicators
+      stopOnHover
+      interval={2000}
     >
       <div>
         <img src="https://i.postimg.cc/HsF3Mxsd/image1.jpg" />

@@ -7,8 +7,6 @@ export const ButtonStyles = styled.div`
   width: 100px;
   height: 20px;
   display: flex;
-  // align-items: center;
-  // justify-content: center;
   margin-top: 10px;
   margin-left: 10px;
 
