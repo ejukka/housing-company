@@ -5,10 +5,6 @@ import { connect } from "react-redux";
 import { signInStart } from "../redux/user.action";
 
 class SignIn extends React.Component<{ signInStart: any }> {
-  constructor(props: any) {
-    super(props);
-  }
-
   render() {
     const { signInStart } = this.props;
     return (
@@ -24,7 +20,4 @@ const mapDispatchToProps = (dispatch: any) => ({
   signInStart: () => dispatch(signInStart())
 });
 
-export default connect(
-  null,
-  mapDispatchToProps
-)(SignIn);
+export default connect(null, mapDispatchToProps)(SignIn);
