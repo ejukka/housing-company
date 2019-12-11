@@ -19,19 +19,25 @@ const AboutPage = () => (
       <ListGroup.Item>
         <a
           target="_blank"
+          rel="noopener noreferrer"
           href="https://www.kauppalehti.fi/yritykset/yritys/asunto+oy+vihdin+makirinne+/19535312"
         >
           Kaupparekisteri ote
         </a>
       </ListGroup.Item>
       <ListGroup.Item>
-        <a target="_blank" href="https://www.vihti.fi/?s=lankila">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.vihti.fi/?s=lankila"
+        >
           Lankila
         </a>
       </ListGroup.Item>
       <ListGroup.Item>
         <a
           target="_blank"
+          rel="noopener noreferrer"
           href="https://www.vihti.fi/wp-content/uploads/PERSEL-23.10.2012-WEB-N-160-Koillis-Lankila.pdf"
         >
           Koilis-Lankilan asemakaava
@@ -40,6 +46,7 @@ const AboutPage = () => (
       <ListGroup.Item>
         <a
           target="_blank"
+          rel="noopener noreferrer"
           href="https://ilmatieteenlaitos.fi/saa/vihti/lankilanrinne?forecast=daily&day=9"
         >
           Lankilanrinteen säätiedot
@@ -48,6 +55,7 @@ const AboutPage = () => (
       <ListGroup.Item>
         <a
           target="_blank"
+          rel="noopener noreferrer"
           href="http://www.ojakkala.kylanetti.fi/index.php?page=Kylaen-esittely"
         >
           Naapurikylä Ojakkala
