@@ -9,10 +9,6 @@ class Header extends React.Component<{
   signOutStart: any;
   currentUser: any;
 }> {
-  constructor(props: any) {
-    super(props);
-  }
-
   getText(currentUser: any, config: any) {
     console.log("config....", config);
     if (!currentUser) {
@@ -98,7 +94,4 @@ const mapDispatchToProps = (dispatch: any) => ({
   signOutStart: () => dispatch(signOutStart())
 });
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Header);
+export default connect(mapStateToProps, mapDispatchToProps)(Header);
