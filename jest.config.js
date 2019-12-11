@@ -1,5 +1,5 @@
 module.exports = {
-    preset: 'react',
-    setupFilesAfterEnv: ['./src/__mocks__/firebase.utils.mocks'],
-    automock: false,
+  preset: 'ts-jest',
+  setupFilesAfterEnv: ['./src/__mocks__/firebase.utils.mocks'],
+  automock: false,
 };

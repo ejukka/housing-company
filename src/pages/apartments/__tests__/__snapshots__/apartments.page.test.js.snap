@@ -51,6 +51,7 @@ exports[`Renders Apartments page 1`] = `
           >
             <div>
               <img
+                alt="house a"
                 src="https://i.postimg.cc/YqCTRhHF/image3.jpg"
               />
               <p
@@ -66,6 +67,7 @@ exports[`Renders Apartments page 1`] = `
           >
             <div>
               <img
+                alt="house b2 and b3"
                 src="https://i.postimg.cc/HsF3Mxsd/image1.jpg"
               />
               <p
@@ -81,6 +83,7 @@ exports[`Renders Apartments page 1`] = `
           >
             <div>
               <img
+                alt="house a"
                 src="https://i.postimg.cc/158J46Sv/image2.jpg"
               />
               <p
@@ -96,6 +99,7 @@ exports[`Renders Apartments page 1`] = `
           >
             <div>
               <img
+                alt="house a"
                 src="https://i.postimg.cc/YqCTRhHF/image3.jpg"
               />
               <p
@@ -111,6 +115,7 @@ exports[`Renders Apartments page 1`] = `
           >
             <div>
               <img
+                alt="house b2 and b3"
                 src="https://i.postimg.cc/HsF3Mxsd/image1.jpg"
               />
               <p
@@ -208,6 +213,7 @@ exports[`Renders Apartments page 1`] = `
             tabIndex={0}
           >
             <img
+              alt="house b2 and b3"
               onLoad={[Function]}
               src="https://i.postimg.cc/HsF3Mxsd/image1.jpg"
             />
@@ -221,6 +227,7 @@ exports[`Renders Apartments page 1`] = `
             tabIndex={0}
           >
             <img
+              alt="house a"
               src="https://i.postimg.cc/158J46Sv/image2.jpg"
             />
           </li>
@@ -233,6 +240,7 @@ exports[`Renders Apartments page 1`] = `
             tabIndex={0}
           >
             <img
+              alt="house a"
               src="https://i.postimg.cc/YqCTRhHF/image3.jpg"
             />
           </li>
