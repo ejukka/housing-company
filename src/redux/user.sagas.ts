@@ -23,7 +23,7 @@ export function* signOut() {
 }
 
 export function* onSignOutStart() {
-  yield takeLatest(UserTypes.SIGN_iN_START, signOut);
+  yield takeLatest(UserTypes.SIGN_OUT_START, signOut);
 }
 
 export function* signIn() {
@@ -60,5 +60,5 @@ export function* isLoggedIn() {
 }
 
 export function* userSages() {
-  yield all([call(onSignInStart), call(isLoggedIn)]);
+  yield all([call(onSignInStart), call(isLoggedIn), call(onSignOutStart)]);
 }
