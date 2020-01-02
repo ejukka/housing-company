@@ -11,37 +11,26 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import ApartmentsPage from "./pages/apartments/apartments.page";
 import HistoryPage from "./pages/history/history.page";
 
+import { useDispatch } from "react-redux";
+
 import { checkIsUserLoggedIn } from "./redux/user.action";
-import { connect } from "react-redux";
 
-class App extends React.Component {
-  componentDidMount(): void {
-    // @ts-ignore
-    const { checkIsUserLoggedIn } = this.props;
-    checkIsUserLoggedIn();
-  }
+const App = () => {
+  const dispatch = useDispatch();
+  dispatch(checkIsUserLoggedIn());
 
-  render() {
-    return (
-      <div>
-        <Router>
-          <Header />
-          <Route exact path="/" component={HomePage} />
-          <Route exact path="/history" component={HistoryPage} />
-          <Route exact path="/about" component={AboutPage} />
-          <Route exact path="/apartments" component={ApartmentsPage} />
-          <Route exact path="/signin" component={SignIn} />
-        </Router>
-      </div>
-    );
-  }
-}
+  return (
+    <div>
+      <Router>
+        <Header />
+        <Route exact path="/" component={HomePage} />
+        <Route exact path="/history" component={HistoryPage} />
+        <Route exact path="/about" component={AboutPage} />
+        <Route exact path="/apartments" component={ApartmentsPage} />
+        <Route exact path="/signin" component={SignIn} />
+      </Router>
+    </div>
+  );
+};
 
-const mapDispatchToProps = (dispatch: any) => ({
-  checkIsUserLoggedIn: () => dispatch(checkIsUserLoggedIn())
-});
-
-export default connect(
-  null,
-  mapDispatchToProps
-)(App);
+export default App;
