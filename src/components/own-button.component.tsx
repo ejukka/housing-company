@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Button } from "react-bootstrap";
 
+//TODO: refactor or remove...
 class OwnButton extends Component<any> {
   constructor(props: {}) {
     super(props);

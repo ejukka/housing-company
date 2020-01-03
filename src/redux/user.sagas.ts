@@ -14,10 +14,10 @@ import {
 
 export function* signOut() {
   try {
-    const { user } = yield auth.signOut();
-    console.log(user);
-    yield put(signOutSuccess(user));
+    yield auth.signOut();
+    yield put(signOutSuccess());
   } catch (error) {
+    console.log("Error occurred when signing user out: ", error);
     yield put(signOutFailure(error));
   }
 }

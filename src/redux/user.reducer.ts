@@ -7,6 +7,7 @@ const INITIAL_STATE = {
 const userReducer = (state = INITIAL_STATE, action: any) => {
   switch (action.type) {
     case UserTypes.SIGN_iN_START:
+    case UserTypes.SIGN_OUT_START:
       return {
         ...state,
         currentUser: action.payload,
@@ -19,10 +20,17 @@ const userReducer = (state = INITIAL_STATE, action: any) => {
         error: null
       };
     case UserTypes.SIGN_iN_FAILURE:
+    case UserTypes.SIGN_OUT_FAILURE:
       return {
         ...state,
         currentUser: null,
         error: action.payload
+      };
+    case UserTypes.SIGN_OUT_SUCCESS:
+      return {
+        ...state,
+        currentUser: null,
+        error: null
       };
     case UserTypes.CHECK_IS_USER_LOGGED_IN: {
       return state;

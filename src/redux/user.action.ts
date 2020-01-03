@@ -18,9 +18,8 @@ export const signOutStart = () => ({
   type: UserTypes.SIGN_OUT_START
 });
 
-export const signOutSuccess = (user: {}) => ({
-  type: UserTypes.SIGN_OUT_SUCCESS,
-  payload: user
+export const signOutSuccess = () => ({
+  type: UserTypes.SIGN_OUT_SUCCESS
 });
 
 export const signOutFailure = (error: string) => ({

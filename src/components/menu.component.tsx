@@ -4,6 +4,7 @@ import { Container } from "react-bootstrap";
 import Image from "react-bootstrap/Image";
 import { withRouter } from "react-router-dom";
 
+//TODO: refactor this to React Hooks...
 class Menu extends Component<{
   title: any;
   imageUrl: any;
