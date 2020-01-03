@@ -6,7 +6,7 @@ import { signInStart, signOutStart } from "../redux/user.action";
 
 import { useDispatch, useSelector } from "react-redux";
 
-const getText = (currentUser: any, config: any) => {
+const getHeaderText = (currentUser: any, config: any) => {
   console.log("config....", config);
   if (!currentUser) {
     return config.headerText;
@@ -15,12 +15,8 @@ const getText = (currentUser: any, config: any) => {
   }
 };
 
-const Header = () => {
-  const dispatch = useDispatch();
-  // @ts-ignore
-  const { currentUser } = useSelector(state => state.user);
-
-  const text = {
+const getTexts = () => {
+  return {
     headerText: `${process.env.REACT_APP_APP_headerText}`,
     headerTextAdmin: `${process.env.REACT_APP_APP_headerTextAdmin}`,
     link1: `${process.env.REACT_APP_APP_link1}`,
@@ -36,12 +32,18 @@ const Header = () => {
     link6: `${process.env.REACT_APP_APP_link6}`,
     link6Text: `${process.env.REACT_APP_APP_link6Text}`
   };
+};
 
+const Header = () => {
+  const dispatch = useDispatch();
+  // @ts-ignore
+  const { currentUser } = useSelector(state => state.user);
+  const text = getTexts();
   console.log("CurrentUser at header: ", currentUser);
   return (
     <Container>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-        <Navbar.Brand href="/">{getText(currentUser, text)}</Navbar.Brand>
+        <Navbar.Brand href="/">{getHeaderText(currentUser, text)}</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
