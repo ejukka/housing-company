@@ -6,7 +6,7 @@ import { signInStart, signOutStart } from "../redux/user.action";
 
 import { useDispatch, useSelector } from "react-redux";
 
-const getHeaderText = (currentUser: any, config: any) => {
+const getHeaderText = (currentUser: string, config: any) => {
   console.log("config....", config);
   if (!currentUser) {
     return config.headerText;
@@ -36,8 +36,7 @@ const getTexts = () => {
 
 const Header = () => {
   const dispatch = useDispatch();
-  // @ts-ignore
-  const { currentUser } = useSelector(state => state.user);
+  const { currentUser } = useSelector((state: any) => state.user);
   const text = getTexts();
   console.log("CurrentUser at header: ", currentUser);
   return (
