@@ -1,5 +1,6 @@
-.header {
-  //width: 80%;
+import styled from "styled-components";
+
+export const HeaderContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -23,4 +24,15 @@
       background-color: white;
     }
   }
-}
+`;
+
+export const ItemsContainer = styled.div`
+  margin: 20px;
+  color: white;
+
+  &:hover {
+    opacity: 0.8;
+    color: black;
+    background-color: white;
+  }
+`;
