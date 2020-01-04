@@ -7,7 +7,6 @@ import { signInStart, signOutStart } from "../redux/user.action";
 import { useDispatch, useSelector } from "react-redux";
 
 const getHeaderText = (currentUser: string, config: any) => {
-  console.log("config....", config);
   if (!currentUser) {
     return config.headerText;
   } else {
