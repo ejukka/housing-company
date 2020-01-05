@@ -29,7 +29,9 @@ export function* onSignOutStart() {
 export function* signIn() {
   try {
     const { user } = yield auth.signInWithPopup(googleProvider);
-    console.log(user);
+
+    console.log("signIn user saga: ", user);
+    console.log("email: ", user.email);
     yield put(signInSuccess(user));
   } catch (error) {
     console.log("Error occurred: ", error);

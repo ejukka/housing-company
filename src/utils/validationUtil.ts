@@ -1,9 +1,12 @@
-const validateUser = (user: string): boolean => {
+const validateUserEmail = (email: string): boolean => {
   try {
-    console.log(user);
-    return true;
+    const filteredList = whiteList.filter(list => list === email);
+    return filteredList.length > 0 ? true : false;
   } catch (error) {
     return false;
   }
 };
-export default validateUser;
+
+const whiteList = ["jukka.edvardsson@gmail.com", "test@test.com"];
+
+export default validateUserEmail;
