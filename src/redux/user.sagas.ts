@@ -11,6 +11,7 @@ import {
   getCurrentUser,
   googleProvider
 } from "../firebase/firebase.utils";
+import isValidAdminEmail from "../utils/validationUtil";
 
 export function* signOut() {
   try {
@@ -32,7 +33,11 @@ export function* signIn() {
 
     console.log("signIn user saga: ", user);
     console.log("email: ", user.email);
-    yield put(signInSuccess(user));
+    if (user && user.email && isValidAdminEmail(user.email)) {
+      yield put(signInSuccess(user));
+    } else {
+      yield put(signInFailure(user));
+    }
   } catch (error) {
     console.log("Error occurred: ", error);
     yield put(signInFailure(error));
@@ -47,10 +52,11 @@ export function* isLogged() {
   try {
     const userAuth = yield getCurrentUser();
     console.log("is user logged in...", userAuth);
-    if (!userAuth) {
-      return;
-    } else {
+    if (userAuth && userAuth.email && isValidAdminEmail(userAuth.email)) {
       yield put(signInSuccess(userAuth));
+    } else {
+      console.log("not valid user", userAuth);
+      return;
     }
   } catch (error) {
     console.log(error);
