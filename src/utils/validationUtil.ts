@@ -1,4 +1,4 @@
-const validateUserEmail = (email: string): boolean => {
+const isValidAdminEmail = (email: string): boolean => {
   try {
     const filteredList = whiteList.filter(list => list === email);
     return filteredList.length > 0 ? true : false;
@@ -9,4 +9,4 @@ const validateUserEmail = (email: string): boolean => {
 
 const whiteList = ["jukka.edvardsson@gmail.com", "test@test.com"];
 
-export default validateUserEmail;
+export default isValidAdminEmail;
