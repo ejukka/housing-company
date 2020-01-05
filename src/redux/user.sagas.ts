@@ -30,9 +30,6 @@ export function* onSignOutStart() {
 export function* signIn() {
   try {
     const { user } = yield auth.signInWithPopup(googleProvider);
-
-    console.log("signIn user saga: ", user);
-    console.log("email: ", user.email);
     if (user && user.email && isValidAdminEmail(user.email)) {
       yield put(signInSuccess(user));
     } else {
@@ -51,7 +48,6 @@ export function* onSignInStart() {
 export function* isLogged() {
   try {
     const userAuth = yield getCurrentUser();
-    console.log("is user logged in...", userAuth);
     if (userAuth && userAuth.email && isValidAdminEmail(userAuth.email)) {
       yield put(signInSuccess(userAuth));
     } else {
