@@ -2,20 +2,13 @@ import userTypes from "../user.types";
 import SagaTester from "redux-saga-tester";
 import { onSignInStart } from "../user.sagas";
 import { cloneableGenerator } from "@redux-saga/testing-utils";
-import mocksdk from "firebase-mock";
 import "firebase/auth";
-import * as firebase from "firebase";
 import "firebase/firestore";
-// jest.mock('firebase');
-// jest.mock('firebase/app');
-// jest.mock('firebase/auth');
-// jest.mock('firebase/firestore');
 
 describe("start saga test", () => {
   let sagaTester = null;
 
   beforeEach(() => {
-    // firebase.mockClear();
     sagaTester = new SagaTester({});
     sagaTester.start(onSignInStart);
   });
@@ -31,16 +24,16 @@ describe("start saga test", () => {
     expect(sagaTester.wasCalled(userTypes.SIGN_iN_SUCCESS)).toEqual(false);
   });
 
-  // it('should call Sign in start and sign in successful', async () => {
-  //     await sagaTester.dispatch({
-  //         type: userTypes.SIGN_iN_START,
-  //     });
-  //
-  //     await sagaTester.waitFor(userTypes.SIGN_iN_FAILURE);
-  //     expect(sagaTester.wasCalled(userTypes.SIGN_iN_START)).toEqual(true);
-  //     expect(sagaTester.wasCalled(userTypes.SIGN_iN_FAILURE)).toEqual(false);
-  //     expect(sagaTester.wasCalled(userTypes.SIGN_iN_SUCCESS)).toEqual(true);
-  // });
+  it('should call Sign in start and sign in successful', async () => {
+      await sagaTester.dispatch({
+          type: userTypes.SIGN_iN_START,
+      });
+
+      await sagaTester.waitFor(userTypes.SIGN_iN_FAILURE);
+      expect(sagaTester.wasCalled(userTypes.SIGN_iN_START)).toEqual(true);
+      expect(sagaTester.wasCalled(userTypes.SIGN_iN_FAILURE)).toEqual(false);
+      expect(sagaTester.wasCalled(userTypes.SIGN_iN_SUCCESS)).toEqual(true);
+  });
 
   it("should call Sign in start and sign in is succesfull", async () => {
     const gen = cloneableGenerator(onSignInStart)();
