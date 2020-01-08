@@ -1,7 +1,8 @@
 import React from "react";
-import Menu from "../../components/menu.component";
+import Menu from "../../components/menu/menu.component";
 
 const HomePage = () => (
+  //TODO: laita nämä env-tiedostoon
   <div className="container">
     <Menu
       title="As.oy Vihdin Mäkirinne 2"

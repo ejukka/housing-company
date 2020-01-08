@@ -1,6 +1,6 @@
 import React from "react";
 import { ListGroup } from "react-bootstrap";
-import GoogleMapResult from "../../components/google-map.component";
+import GoogleMapResult from "../../components/google-map/google-map.component";
 
 const AboutPage = () => (
   <div className="container">

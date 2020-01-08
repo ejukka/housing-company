@@ -33,7 +33,12 @@ const userReducer = (state = INITIAL_STATE, action: any) => {
         error: null
       };
     case UserTypes.CHECK_IS_USER_LOGGED_IN: {
-      return state;
+      console.log("state: ", state);
+      return {
+        ...state,
+        currentUser: state.currentUser,
+        error: null
+      };
     }
     default:
       return state;

@@ -2,7 +2,7 @@ import React from "react";
 
 import { Button, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 
-import { signInStart, signOutStart } from "../redux/user.action";
+import { signInStart, signOutStart } from "../../redux/user.action";
 
 import { useDispatch, useSelector } from "react-redux";
 
@@ -72,11 +72,9 @@ const Header = () => {
           <Nav>
             <Nav.Link href="/about">Lisätietoa</Nav.Link>
             {!currentUser ? (
-              <Button onClick={() => dispatch(signInStart())}>SIGN IN </Button>
+              <Button onClick={() => dispatch(signInStart())}>SIGN IN</Button>
             ) : (
-              <Button onClick={() => dispatch(signOutStart())}>
-                SIGN OUT{" "}
-              </Button>
+              <Button onClick={() => dispatch(signOutStart())}>SIGN OUT</Button>
             )}
           </Nav>
         </Navbar.Collapse>
