@@ -14,24 +14,29 @@ import HistoryPage from "./pages/history/history.page";
 import { Provider, useDispatch } from "react-redux";
 
 import { checkIsUserLoggedIn } from "./redux/user.action";
+import reduxStore from "./redux/store";
+import { PersistGate } from "redux-persist/integration/react";
 
 const App = () => {
   const dispatch = useDispatch();
   dispatch(checkIsUserLoggedIn());
+  const { store, persistor } = reduxStore;
 
   return (
-    <Provider>
-      <div>
-        <Router>
-          <Header />
-          <Route exact path="/" component={HomePage} />
-          <Route exact path="/history" component={HistoryPage} />
-          <Route exact path="/about" component={AboutPage} />
-          <Route exact path="/apartments" component={ApartmentsPage} />
-          <Route exact path="/signin" component={SignIn} />
-        </Router>
-      </div>
-    </Provider>
+    <PersistGate persistor={persistor}>
+      <Provider store={store}>
+        <div>
+          <Router>
+            <Header />
+            <Route exact path="/" component={HomePage} />
+            <Route exact path="/history" component={HistoryPage} />
+            <Route exact path="/about" component={AboutPage} />
+            <Route exact path="/apartments" component={ApartmentsPage} />
+            <Route exact path="/signin" component={SignIn} />
+          </Router>
+        </div>
+      </Provider>
+    </PersistGate>
   );
 };
 
