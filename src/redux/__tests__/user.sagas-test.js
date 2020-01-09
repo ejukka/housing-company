@@ -28,10 +28,12 @@ describe("start saga test", () => {
       await sagaTester.dispatch({
           type: userTypes.SIGN_iN_START,
       });
+      await sagaTester.dispatch({
+          type: userTypes.SIGN_iN_SUCCESS,
+      });
 
-      await sagaTester.waitFor(userTypes.SIGN_iN_FAILURE);
+      await sagaTester.waitFor(userTypes.SIGN_iN_START);
       expect(sagaTester.wasCalled(userTypes.SIGN_iN_START)).toEqual(true);
-      expect(sagaTester.wasCalled(userTypes.SIGN_iN_FAILURE)).toEqual(false);
       expect(sagaTester.wasCalled(userTypes.SIGN_iN_SUCCESS)).toEqual(true);
   });
 

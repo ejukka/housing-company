@@ -1,11 +1,31 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import HomePage from "../home.page";
+import ReactDOM from "react-dom";
+import { act } from "react-dom/test-utils";
+import pretty from "pretty";
+import { BrowserRouter } from "react-router-dom";
+
+let container;
+
+beforeEach(() => {
+    container = document.createElement("div");
+    document.body.appendChild(container);
+});
+
+afterEach(() => {
+    document.body.removeChild(container);
+    container = null;
+});
 
 test('Renders Home page', () => {
-    const component = renderer.create(
-        <HomePage />,
-    );
-    let tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    act(() => {
+        ReactDOM.render(
+            <BrowserRouter>
+                <HomePage />,
+            </BrowserRouter>,
+            container
+        );
+    });
+
+    expect(pretty(container.innerHTML)).toMatchSnapshot();
 });

@@ -1,11 +1,34 @@
-import React from 'react';
-import Header from '../header.component';
-import renderer from 'react-test-renderer';
+import React from "react";
+import ReactDOM from "react-dom";
+import Header from "../header.component";
+import { act } from "react-dom/test-utils";
+import { Provider } from "react-redux";
+import reduxStore from "../../../redux/store";
+import pretty from "pretty";
 
-test('Renders Header component', () => {
-    const component = renderer.create(
+let container;
+
+beforeEach(() => {
+  container = document.createElement("div");
+  document.body.appendChild(container);
+});
+
+afterEach(() => {
+  document.body.removeChild(container);
+  container = null;
+});
+
+test("Renders SignIn component", () => {
+  const store = reduxStore.store;
+  act(() => {
+    ReactDOM.render(
+      <Provider store={store}>
         <Header />,
+      </Provider>,
+      container
     );
-    let tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+  });
+
+  expect(pretty(container.innerHTML)).toMatchSnapshot();
+
 });

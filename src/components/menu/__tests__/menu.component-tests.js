@@ -1,11 +1,33 @@
 import React from 'react';
-import Menu from '../menu.component';
-import renderer from 'react-test-renderer';
+import ReactDOM from "react-dom";
+import { act } from "react-dom/test-utils";
+import pretty from "pretty";
+import Header from "../../header/header.component";
+import { Provider} from "react-redux";
+import reduxStore from "../../../redux/store";
 
-test('Renders Menu component', () => {
-    const component = renderer.create(
-        <Menu />,
-    );
-    let tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+let container;
+
+beforeEach(() => {
+    container = document.createElement("div");
+    document.body.appendChild(container);
+});
+
+afterEach(() => {
+    document.body.removeChild(container);
+    container = null;
+});
+
+test('Renders Header component', () => {
+    const store = reduxStore.store;
+    act(() => {
+        ReactDOM.render(
+            <Provider store={store}>
+                <Header />,
+            </Provider>,
+            container
+        );
+    });
+
+    expect(pretty(container.innerHTML)).toMatchSnapshot();
 });

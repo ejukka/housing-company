@@ -37,7 +37,6 @@ const Header = () => {
   const dispatch = useDispatch();
   const { currentUser } = useSelector((state: any) => state.user);
   const text = getTexts();
-  console.log("CurrentUser at header: ", currentUser);
   return (
     <Container>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">

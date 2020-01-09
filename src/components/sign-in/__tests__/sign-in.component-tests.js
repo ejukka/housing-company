@@ -1,11 +1,33 @@
-import React from 'react';
-import SignIn from '../sign-in.component';
-import renderer from 'react-test-renderer';
+import React from "react";
+import ReactDOM from "react-dom";
+import SignIn from "../sign-in.component";
+import { act } from "react-dom/test-utils";
+import { Provider } from "react-redux";
+import reduxStore from "../../../redux/store";
+import pretty from "pretty";
 
-test('Renders SignIn component', () => {
-    const component = renderer.create(
-        <SignIn />,
+let container;
+
+beforeEach(() => {
+  container = document.createElement("div");
+  document.body.appendChild(container);
+});
+
+afterEach(() => {
+  document.body.removeChild(container);
+  container = null;
+});
+
+test("Renders SignIn component", () => {
+  const store = reduxStore.store;
+  act(() => {
+    ReactDOM.render(
+        <Provider store={store}>
+          {" "}
+          <SignIn />{" "}
+        </Provider>,
+        container
     );
-    let tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+  });
+  expect(pretty(container.innerHTML)).toMatchSnapshot();
 });

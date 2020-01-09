@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+"<div>
+  <div class=\\"container\\">
+    <nav class=\\"navbar navbar-expand-lg navbar-dark bg-dark\\"><a href=\\"/\\" class=\\"navbar-brand\\">Vihdin Mäkirinne 2</a><button aria-controls=\\"responsive-navbar-nav\\" type=\\"button\\" aria-label=\\"Toggle navigation\\" class=\\"navbar-toggler collapsed\\"><span class=\\"navbar-toggler-icon\\"></span></button>
+      <div class=\\"navbar-collapse collapse\\" id=\\"responsive-navbar-nav\\">
+        <div class=\\"mr-auto navbar-nav\\"><a href=\\"/apartments\\" data-rb-event-key=\\"/apartments\\" class=\\"nav-link\\">Asunnot</a><a href=\\"/history\\" data-rb-event-key=\\"/history\\" class=\\"nav-link\\">historia</a>
+          <div class=\\"dropdown nav-item\\"><a aria-haspopup=\\"true\\" aria-expanded=\\"false\\" href=\\"#\\" class=\\"dropdown-toggle nav-link\\" role=\\"button\\">Linkkejä</a></div>
+        </div>
+        <div class=\\"navbar-nav\\"><a href=\\"/about\\" data-rb-event-key=\\"/about\\" class=\\"nav-link\\">Lisätietoa</a><button type=\\"button\\" class=\\"btn btn-primary\\">SIGN IN</button></div>
+      </div>
+    </nav>
+  </div>
+  <div class=\\"container\\">
+    <div class=\\"container\\">
+      <div class=\\"sc-bdVaJa eskUMO\\"><img style=\\"background-image: url(https://i.postimg.cc/HsF3Mxsd/image1.jpg);\\" class=\\"background-image\\">
+        <div class=\\"sc-bwzfXH kXomTW\\">
+          <h1 class=\\"sc-htpNat hgjgiu\\">AS.OY VIHDIN MÄKIRINNE 2</h1><span class=\\"sc-bxivhb fzOaMp\\">KATSO</span>
+        </div>
+      </div>
+    </div>
+    <div class=\\"container\\">
+      <div class=\\"sc-bdVaJa eskUMO\\"><img style=\\"background-image: url(https://i.postimg.cc/158J46Sv/image2.jpg);\\" class=\\"background-image\\">
+        <div class=\\"sc-bwzfXH kXomTW\\">
+          <h1 class=\\"sc-htpNat hgjgiu\\">VIHDIN KUNTA</h1><span class=\\"sc-bxivhb fzOaMp\\">KATSO</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>, div"
+`;

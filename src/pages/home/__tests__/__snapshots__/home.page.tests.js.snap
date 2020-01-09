@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders Home page 1`] = `
+"<div class=\\"container\\">
+  <div class=\\"container\\">
+    <div class=\\"sc-bdVaJa eskUMO\\"><img style=\\"background-image: url(https://i.postimg.cc/HsF3Mxsd/image1.jpg);\\" class=\\"background-image\\">
+      <div class=\\"sc-bwzfXH kXomTW\\">
+        <h1 class=\\"sc-htpNat hgjgiu\\">AS.OY VIHDIN MÄKIRINNE 2</h1><span class=\\"sc-bxivhb fzOaMp\\">KATSO</span>
+      </div>
+    </div>
+  </div>
+  <div class=\\"container\\">
+    <div class=\\"sc-bdVaJa eskUMO\\"><img style=\\"background-image: url(https://i.postimg.cc/158J46Sv/image2.jpg);\\" class=\\"background-image\\">
+      <div class=\\"sc-bwzfXH kXomTW\\">
+        <h1 class=\\"sc-htpNat hgjgiu\\">VIHDIN KUNTA</h1><span class=\\"sc-bxivhb fzOaMp\\">KATSO</span>
+      </div>
+    </div>
+  </div>
+</div>,"
+`;
