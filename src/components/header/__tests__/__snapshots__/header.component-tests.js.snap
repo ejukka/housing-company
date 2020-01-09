@@ -10,5 +10,5 @@ exports[`Renders SignIn component 1`] = `
       <div class=\\"navbar-nav\\"><a href=\\"/about\\" data-rb-event-key=\\"/about\\" class=\\"nav-link\\">Lisätietoa</a><button type=\\"button\\" class=\\"btn btn-primary\\">SIGN IN</button></div>
     </div>
   </nav>
-</div>,"
+</div>"
 `;

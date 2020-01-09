@@ -23,7 +23,7 @@ test('Renders Header component', () => {
     act(() => {
         ReactDOM.render(
             <Provider store={store}>
-                <Header />,
+                <Header />
             </Provider>,
             container
         );

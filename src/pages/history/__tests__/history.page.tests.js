@@ -4,7 +4,7 @@ import renderer from 'react-test-renderer';
 
 test('Renders History page', () => {
     const component = renderer.create(
-        <HistoryPage />,
+        <HistoryPage />
     );
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();

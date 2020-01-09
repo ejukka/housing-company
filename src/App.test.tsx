@@ -23,7 +23,7 @@ it("renders without crashing", () => {
   act(() => {
     ReactDOM.render(
       <Provider store={store}>
-        <App />, div
+        <App />
       </Provider>,
       container
     );

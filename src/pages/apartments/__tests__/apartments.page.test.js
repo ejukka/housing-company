@@ -4,7 +4,7 @@ import renderer from 'react-test-renderer';
 
 test('Renders Apartments page', () => {
     const component = renderer.create(
-        <ApartmentsPage />,
+        <ApartmentsPage />
     );
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();

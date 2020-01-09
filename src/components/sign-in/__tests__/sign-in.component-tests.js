@@ -23,8 +23,7 @@ test("Renders SignIn component", () => {
   act(() => {
     ReactDOM.render(
         <Provider store={store}>
-          {" "}
-          <SignIn />{" "}
+          <SignIn />
         </Provider>,
         container
     );
