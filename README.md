@@ -1,5 +1,11 @@
 # This is project for housing company
 
+#### Prerequisite 
+
+ - Yarn 
+ - Google maps API key
+ - Firebase API Key
+
 ### environment setup
 - yarn install
 - create .env-file on the root of the project and place Google API KEY there
@@ -58,7 +64,7 @@
 
 ````
 let script = document.createElement("script");
-script.src = "https://maps.googleapis.com/maps/api/js?key=AIzayB7VXyRvsOnT9eGzcVGrn8lU";
+script.src = "https://maps.googleapis.com/maps/api/js?key=YOUR_OWN_GOOGLE_API_KEY";
 script.type = "text/javascript";
 document.head.appendChild(script);`
 ````
