@@ -41,7 +41,7 @@
 
 ````
 let script = document.createElement("script");
-script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBA3QGLAvM7VXyRhvsOnTq9eGzcVGrn8lU";
+script.src = "https://maps.googleapis.com/maps/api/js?key=AIzayB7VXyRvsOnT9eGzcVGrn8lU";
 script.type = "text/javascript";
 document.head.appendChild(script);`
 ````
