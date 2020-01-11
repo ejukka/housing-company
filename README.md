@@ -36,6 +36,8 @@
 - REACT_APP_MENU_TITLE1_LINK=''
 - REACT_APP_MENU_TITLE2='Test title 2'
 - REACT_APP_MENU_TITLE2_LINK=''
+- REACT_APP_LATITUDE='90.3624643'
+- REACT_APP_LONGITUDE='90.3637589'
 
 ## Create following script.js file to your public folder
 
