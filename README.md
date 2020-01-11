@@ -32,6 +32,10 @@
 - REACT_APP_APP_link5='https://duckduckgo.com/'
 - REACT_APP_APP_link6Text='Six link'
 - REACT_APP_APP_link6='https://duckduckgo.com/'
+- REACT_APP_MENU_TITLE1='Test title1'
+- REACT_APP_MENU_TITLE1_LINK=''
+- REACT_APP_MENU_TITLE2='Test title 2'
+- REACT_APP_MENU_TITLE2_LINK=''
 
 ## Create following script.js file to your public folder
 
