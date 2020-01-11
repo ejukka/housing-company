@@ -51,13 +51,13 @@ exports[`Renders Apartments page 1`] = `
           >
             <div>
               <img
-                alt="house a"
+                alt="house b2 and b3"
                 src="https://i.postimg.cc/YqCTRhHF/image3.jpg"
               />
               <p
                 className="legend"
               >
-                Erillistalo: Asunto A
+                https://i.postimg.cc/YqCTRhHF/image3.jpg
               </p>
             </div>
           </li>
@@ -83,13 +83,13 @@ exports[`Renders Apartments page 1`] = `
           >
             <div>
               <img
-                alt="house a"
+                alt="house b2 and b3"
                 src="https://i.postimg.cc/158J46Sv/image2.jpg"
               />
               <p
                 className="legend"
               >
-                Erillistalo: Asunto A
+                https://i.postimg.cc/158J46Sv/image2.jpg
               </p>
             </div>
           </li>
@@ -99,13 +99,13 @@ exports[`Renders Apartments page 1`] = `
           >
             <div>
               <img
-                alt="house a"
+                alt="house b2 and b3"
                 src="https://i.postimg.cc/YqCTRhHF/image3.jpg"
               />
               <p
                 className="legend"
               >
-                Erillistalo: Asunto A
+                https://i.postimg.cc/YqCTRhHF/image3.jpg
               </p>
             </div>
           </li>
@@ -227,7 +227,7 @@ exports[`Renders Apartments page 1`] = `
             tabIndex={0}
           >
             <img
-              alt="house a"
+              alt="house b2 and b3"
               src="https://i.postimg.cc/158J46Sv/image2.jpg"
             />
           </li>
@@ -240,7 +240,7 @@ exports[`Renders Apartments page 1`] = `
             tabIndex={0}
           >
             <img
-              alt="house a"
+              alt="house b2 and b3"
               src="https://i.postimg.cc/YqCTRhHF/image3.jpg"
             />
           </li>

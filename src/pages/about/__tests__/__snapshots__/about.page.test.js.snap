@@ -82,7 +82,7 @@ exports[`Renders About page 1`] = `
       onClick={[Function]}
     >
       <a
-        href="https://www.vihti.fi/wp-content/uploads/PERSEL-23.10.2012-WEB-N-160-Koillis-Lankila.pdf"
+        href="Koilis-Lankilan asemakaava"
         rel="noopener noreferrer"
         target="_blank"
       >
