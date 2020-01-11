@@ -46,6 +46,7 @@ export function* onSignInStart() {
 }
 
 export function* isLogged() {
+  //TODO: create own action for isLoggedIn....
   try {
     const userAuth = yield getCurrentUser();
     if (userAuth && userAuth.email && isValidAdminEmail(userAuth.email)) {
