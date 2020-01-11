@@ -3,6 +3,8 @@ import UserTypes from "./user.types";
 import {
   signInFailure,
   signInSuccess,
+  userIsLoggedIn,
+  userIsNotLoggedIn,
   signOutFailure,
   signOutSuccess
 } from "./user.action";
@@ -46,13 +48,13 @@ export function* onSignInStart() {
 }
 
 export function* isLogged() {
-  //TODO: create own action for isLoggedIn....
   try {
     const userAuth = yield getCurrentUser();
     if (userAuth && userAuth.email && isValidAdminEmail(userAuth.email)) {
-      yield put(signInSuccess(userAuth));
+      yield put(userIsLoggedIn(userAuth));
     } else {
       console.log("not valid user", userAuth);
+      yield put(userIsNotLoggedIn(userAuth));
       return;
     }
   } catch (error) {

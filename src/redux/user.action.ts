@@ -30,3 +30,13 @@ export const signOutFailure = (error: string) => ({
 export const checkIsUserLoggedIn = () => ({
   type: UserTypes.CHECK_IS_USER_LOGGED_IN
 });
+
+export const userIsLoggedIn = (user: {}) => ({
+  type: UserTypes.USER_IS_LOGGED_IN,
+  payload: user
+});
+
+export const userIsNotLoggedIn = (user: {}) => ({
+  type: UserTypes.USER_IS_NOT_LOGGED_IN,
+  payload: user
+});

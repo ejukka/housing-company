@@ -14,6 +14,7 @@ const userReducer = (state = INITIAL_STATE, action: any) => {
         error: null
       };
     case UserTypes.SIGN_iN_SUCCESS:
+    case UserTypes.USER_IS_LOGGED_IN:
       return {
         ...state,
         currentUser: action.payload,
@@ -27,6 +28,7 @@ const userReducer = (state = INITIAL_STATE, action: any) => {
         error: action.payload
       };
     case UserTypes.SIGN_OUT_SUCCESS:
+    case UserTypes.USER_IS_NOT_LOGGED_IN:
       return {
         ...state,
         currentUser: null,

@@ -39,9 +39,11 @@
 
 ## Create following script.js file to your public folder
 
-var script = document.createElement("script");
-script.src = "https://maps.googleapis.com/maps/api/js?key=APIKEY";
-document.head.appendChild(script);
-
+````
+let script = document.createElement("script");
+script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBA3QGLAvM7VXyRhvsOnTq9eGzcVGrn8lU";
+script.type = "text/javascript";
+document.head.appendChild(script);`
+````
 ### start project
 yarn start
