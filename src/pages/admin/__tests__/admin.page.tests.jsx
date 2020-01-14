@@ -19,12 +19,6 @@ afterEach(() => {
 });
 
 test('Renders Admin page', () => {
-    // const component = renderer.create(
-    //     <AdminPage />
-    // );
-    // let tree = component.toJSON();
-    // expect(tree).toMatchSnapshot();
-
     const store = reduxStore.store;
     act(() => {
         ReactDOM.render(
