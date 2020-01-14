@@ -29,7 +29,9 @@ const getTexts = () => {
     link5: `${process.env.REACT_APP_APP_link5}`,
     link5Text: `${process.env.REACT_APP_APP_link5Text}`,
     link6: `${process.env.REACT_APP_APP_link6}`,
-    link6Text: `${process.env.REACT_APP_APP_link6Text}`
+    link6Text: `${process.env.REACT_APP_APP_link6Text}`,
+    admin_page_link: `${process.env.REACT_APP_APP_admin_page_link_text}`,
+    admin_page_link_text: `${process.env.REACT_APP_APP_admin_page_link}`
   };
 };
 
@@ -66,8 +68,14 @@ const Header = () => {
               <NavDropdown.Item href={text.link6} target="_blank">
                 {text.link6Text}
               </NavDropdown.Item>
+              {currentUser ? (
+                <NavDropdown.Item href={text.admin_page_link} target="_blank">
+                  {text.admin_page_link_text}
+                </NavDropdown.Item>
+              ) : null}
             </NavDropdown>
           </Nav>
+          {!currentUser ? <Nav.Link href="/admin">admin</Nav.Link> : null}
           <Nav>
             <Nav.Link href="/about">Lisätietoa</Nav.Link>
             {!currentUser ? (

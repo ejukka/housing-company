@@ -7,6 +7,10 @@ const isValidAdminEmail = (email: string): boolean => {
   }
 };
 
-const whiteList = ["jukka.edvardsson@gmail.com", "test@test.com"];
+const config = {
+  whiteList: `${process.env.REACT_APP_ADMIN_EMAIL_WHITE_LIST}`
+};
+
+const whiteList = config.whiteList.split(",");
 
 export default isValidAdminEmail;

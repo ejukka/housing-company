@@ -7,7 +7,7 @@ exports[`renders without crashing 1`] = `
       <div class=\\"navbar-collapse collapse\\" id=\\"responsive-navbar-nav\\">
         <div class=\\"mr-auto navbar-nav\\"><a href=\\"/apartments\\" data-rb-event-key=\\"/apartments\\" class=\\"nav-link\\">Asunnot</a><a href=\\"/history\\" data-rb-event-key=\\"/history\\" class=\\"nav-link\\">historia</a>
           <div class=\\"dropdown nav-item\\"><a aria-haspopup=\\"true\\" aria-expanded=\\"false\\" href=\\"#\\" class=\\"dropdown-toggle nav-link\\" role=\\"button\\">Linkkejä</a></div>
-        </div>
+        </div><a href=\\"/admin\\" class=\\"nav-link\\">admin</a>
         <div class=\\"navbar-nav\\"><a href=\\"/about\\" data-rb-event-key=\\"/about\\" class=\\"nav-link\\">Lisätietoa</a><button type=\\"button\\" class=\\"btn btn-primary\\">SIGN IN</button></div>
       </div>
     </nav>
