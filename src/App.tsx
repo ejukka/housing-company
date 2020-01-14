@@ -16,6 +16,7 @@ import { Provider, useDispatch } from "react-redux";
 import { checkIsUserLoggedIn } from "./redux/user.action";
 import reduxStore from "./redux/store";
 import { PersistGate } from "redux-persist/integration/react";
+import AdminPage from "./pages/admin/admin.page";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -33,7 +34,7 @@ const App = () => {
             <Route exact path="/about" component={AboutPage} />
             <Route exact path="/apartments" component={ApartmentsPage} />
             <Route exact path="/signin" component={SignIn} />
-            <Route exact path="/admin" component={AboutPage} />
+            <Route exact path="/admin" component={AdminPage} />
           </Router>
         </div>
       </Provider>
