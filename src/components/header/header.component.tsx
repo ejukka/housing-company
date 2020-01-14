@@ -69,13 +69,16 @@ const Header = () => {
                 {text.link6Text}
               </NavDropdown.Item>
               {currentUser ? (
-                <NavDropdown.Item href={text.admin_page_link} target="_blank">
-                  {text.admin_page_link_text}
+                <NavDropdown.Item
+                  href={text.admin_page_link_text}
+                  target="_blank"
+                >
+                  {text.admin_page_link}
                 </NavDropdown.Item>
               ) : null}
             </NavDropdown>
+            {!currentUser ? null : <Nav.Link href="/admin">admin</Nav.Link>}
           </Nav>
-          {!currentUser ? <Nav.Link href="/admin">admin</Nav.Link> : null}
           <Nav>
             <Nav.Link href="/about">Lisätietoa</Nav.Link>
             {!currentUser ? (
