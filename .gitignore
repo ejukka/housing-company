@@ -34,3 +34,4 @@ yarn-error.log*
 .env_test
 .env_backup
 public/script.js
+public/script2.js

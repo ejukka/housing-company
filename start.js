@@ -20,6 +20,16 @@ function readFile() {
     });
 }
 
+function createScriptsFile() {
+    let writeStream = fs.createWriteStream("public/script2.js");
+    writeStream.write("let script = document.createElement(\"script\");");
+    writeStream.write("script.src = \"https://maps.googleapis.com/maps/api/js?key=YOUR_OWN_GOOGLE_API_KEY\";");
+    writeStream.write("script.type = \"text/javascript\";");
+    writeStream.write("document.head.appendChild(script);");
+    writeStream.end();
+}
+
 createEnvFile();
 writeDefault();
 readFile();
+createScriptsFile();
