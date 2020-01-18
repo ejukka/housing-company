@@ -29,17 +29,17 @@ exports[`Renders About page 1`] = `
     <div
       className="col-sm"
     >
-      Lansetintie 14, 03100 Nummela
+      testitie 1
     </div>
     <div
       className="col-sm"
     >
-      2007
+      2020
     </div>
     <div
       className="col-sm"
     >
-      1953531-2
+      12331-12
     </div>
   </div>
   <br />
@@ -54,11 +54,11 @@ exports[`Renders About page 1`] = `
       onClick={[Function]}
     >
       <a
-        href="https://www.kauppalehti.fi/yritykset/yritys/asunto+oy+vihdin+makirinne+/19535312"
+        href="undefined"
         rel="noopener noreferrer"
         target="_blank"
       >
-        Kaupparekisteri ote
+        undefined
       </a>
     </div>
     <div
@@ -68,11 +68,11 @@ exports[`Renders About page 1`] = `
       onClick={[Function]}
     >
       <a
-        href="https://www.vihti.fi/?s=lankila"
+        href="undefined"
         rel="noopener noreferrer"
         target="_blank"
       >
-        Lankila
+        undefined
       </a>
     </div>
     <div
@@ -82,11 +82,11 @@ exports[`Renders About page 1`] = `
       onClick={[Function]}
     >
       <a
-        href="Koilis-Lankilan asemakaava"
+        href="undefined"
         rel="noopener noreferrer"
         target="_blank"
       >
-        Koilis-Lankilan asemakaava
+        undefined
       </a>
     </div>
     <div
@@ -96,11 +96,11 @@ exports[`Renders About page 1`] = `
       onClick={[Function]}
     >
       <a
-        href="https://ilmatieteenlaitos.fi/saa/vihti/lankilanrinne?forecast=daily&day=9"
+        href="undefined"
         rel="noopener noreferrer"
         target="_blank"
       >
-        Lankilanrinteen säätiedot
+        undefined
       </a>
     </div>
     <div
@@ -110,11 +110,11 @@ exports[`Renders About page 1`] = `
       onClick={[Function]}
     >
       <a
-        href="http://www.ojakkala.kylanetti.fi/index.php?page=Kylaen-esittely"
+        href="undefined"
         rel="noopener noreferrer"
         target="_blank"
       >
-        Naapurikylä Ojakkala
+        undefined
       </a>
     </div>
   </div>
