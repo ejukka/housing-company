@@ -9,6 +9,7 @@ const isEnvFileCreated = () => {
         createEnvFile();
         writeDefaultValuesToEnvFile();
         createScriptsFile();
+        copyEnvToTestEnv();
     }
 };
 
@@ -35,6 +36,16 @@ const createScriptsFile = () => {
     writeStream.write("document.head.appendChild(script);");
     writeStream.end();
     console.log('\nscripts2.js file created on folder public/ \n');
+};
+
+const copyEnvToTestEnv = () => {
+    fs.copyFile('.env', '.env.test', (err) => {
+        if (err) {
+            throw err;
+        } else {
+            console.log('successfully copies .env to .env.test');
+        }
+    });
 };
 
 isEnvFileCreated();
