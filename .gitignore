@@ -13,7 +13,11 @@
 
 # misc
 .DS_Store
+.env
+.env_test
+.env_backup
 .env.local
+.env.test
 .env.development.local
 .env.test.local
 .env.production.local
@@ -30,8 +34,6 @@ yarn-error.log*
 *css
 *styles.css.map
 
-.env
-.env_test
-.env_backup
+
 public/script.js
 public/script2.js
