@@ -31,7 +31,14 @@ const getTexts = () => {
     link6: `${process.env.REACT_APP_APP_link6}`,
     link6Text: `${process.env.REACT_APP_APP_link6Text}`,
     admin_page_link: `${process.env.REACT_APP_APP_admin_page_link_text}`,
-    admin_page_link_text: `${process.env.REACT_APP_APP_admin_page_link}`
+    admin_page_link_text: `${process.env.REACT_APP_APP_admin_page_link}`,
+
+    header_text1: `${process.env.REACT_APP_APP_header_text1}`,
+    header_text2: `${process.env.REACT_APP_APP_header_text2}`,
+    header_text3: `${process.env.REACT_APP_APP_header_text3}`,
+    header_text4: `${process.env.REACT_APP_APP_header_text4}`,
+    sign_in_text: `${process.env.REACT_APP_APP_sign_in_text}`,
+    sign_out_text: `${process.env.REACT_APP_APP_sign_out_text}`
   };
 };
 
@@ -46,9 +53,9 @@ const Header = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="/apartments">Asunnot</Nav.Link>
-            <Nav.Link href="/history">historia</Nav.Link>
-            <NavDropdown title="Linkkejä" id="collasible-nav-dropdown">
+            <Nav.Link href="/apartments">{text.header_text1}</Nav.Link>
+            <Nav.Link href="/history">{text.header_text2}</Nav.Link>
+            <NavDropdown title={text.header_text3} id="collasible-nav-dropdown">
               <NavDropdown.Item href={text.link1} target="_blank">
                 {text.link1Text}
               </NavDropdown.Item>
@@ -80,11 +87,15 @@ const Header = () => {
             {!currentUser ? null : <Nav.Link href="/admin">admin</Nav.Link>}
           </Nav>
           <Nav>
-            <Nav.Link href="/about">Lisätietoa</Nav.Link>
+            <Nav.Link href="/about">{text.header_text4}</Nav.Link>
             {!currentUser ? (
-              <Button onClick={() => dispatch(signInStart())}>SIGN IN</Button>
+              <Button onClick={() => dispatch(signInStart())}>
+                {text.sign_in_text}
+              </Button>
             ) : (
-              <Button onClick={() => dispatch(signOutStart())}>SIGN OUT</Button>
+              <Button onClick={() => dispatch(signOutStart())}>
+                {text.sign_out_text}
+              </Button>
             )}
           </Nav>
         </Navbar.Collapse>
