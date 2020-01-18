@@ -16,3 +16,9 @@ ReactDOM.render(
   </Provider>,
   document.getElementById("root")
 );
+
+const config = {
+  title: `${process.env.REACT_APP_DOCUMENT_TITLE}`
+};
+
+document.title = config.title;
