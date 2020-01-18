@@ -10,17 +10,17 @@ exports[`Renders About page 1`] = `
     <div
       className="col-sm"
     >
-      Osoite
+      address
     </div>
     <div
       className="col-sm"
     >
-      Rakennusvuosi
+      build year
     </div>
     <div
       className="col-sm"
     >
-      Y-tunnus
+      year
     </div>
   </div>
   <div
@@ -29,7 +29,7 @@ exports[`Renders About page 1`] = `
     <div
       className="col-sm"
     >
-      testitie 1
+      test address 1
     </div>
     <div
       className="col-sm"

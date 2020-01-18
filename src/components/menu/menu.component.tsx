@@ -9,6 +9,10 @@ import {
   SubtitleSpan
 } from "./menu.component.styles";
 
+const config = {
+  subtitle: `${process.env.REACT_APP_MENU_SUB_TITLE}`
+};
+
 const Menu = (props: any) => {
   const handleClick = (history: any) => {
     history.push("/apartments");
@@ -24,7 +28,7 @@ const Menu = (props: any) => {
         />
         <ItemsContent>
           <TitleH1>{props.title.toUpperCase()}</TitleH1>
-          <SubtitleSpan>KATSO</SubtitleSpan>
+          <SubtitleSpan>{config.subtitle}</SubtitleSpan>
         </ItemsContent>
       </MenuContainer>
     </Container>
