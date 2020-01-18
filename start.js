@@ -1,26 +1,20 @@
 const fs = require('fs');
 
-function createEnvFile() {
+const createEnvFile = () => {
     let createStream = fs.createWriteStream(".env");
     createStream.end();
 }
 
-function writeDefault() {
-    let writeStream = fs.createWriteStream(".env");
-    writeStream.write("TEST");
-    writeStream.end();
-}
-
-function readFile() {
-    fs.readFile('fields.txt', 'utf8', function(err, data) {
+const writeDefaultValuesToEnvFile = () => {
+    fs.readFile('fields.txt', 'utf8', (err, data) => {
           console.log(data);
-           let writeStream = fs.createWriteStream(".env");
+          let writeStream = fs.createWriteStream(".env");
           writeStream.write(data);
           writeStream.end();
     });
 }
 
-function createScriptsFile() {
+const createScriptsFile = () =>{
     let writeStream = fs.createWriteStream("public/script2.js");
     writeStream.write("let script = document.createElement(\"script\");");
     writeStream.write("script.src = \"https://maps.googleapis.com/maps/api/js?key=YOUR_OWN_GOOGLE_API_KEY\";");
@@ -30,6 +24,5 @@ function createScriptsFile() {
 }
 
 createEnvFile();
-writeDefault();
-readFile();
+writeDefaultValuesToEnvFile();
 createScriptsFile();
