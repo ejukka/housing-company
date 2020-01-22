@@ -1,6 +1,6 @@
-const initTest = () => {
-  let container: any;
+export let container: any = undefined;
 
+const initTest = () => {
   beforeEach(() => {
     container = document.createElement("div");
     document.body.appendChild(container);

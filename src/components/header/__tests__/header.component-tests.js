@@ -5,20 +5,12 @@ import { act } from "react-dom/test-utils";
 import { Provider } from "react-redux";
 import reduxStore from "../../../redux/store";
 import pretty from "pretty";
+import initTest from "../../../utils/testUtils"
+import { container } from "../../../utils/testUtils"
 
-let container;
+initTest();
 
-beforeEach(() => {
-  container = document.createElement("div");
-  document.body.appendChild(container);
-});
-
-afterEach(() => {
-  document.body.removeChild(container);
-  container = null;
-});
-
-test("Renders SignIn component", () => {
+test("Renders Header component", () => {
   const store = reduxStore.store;
   act(() => {
     ReactDOM.render(

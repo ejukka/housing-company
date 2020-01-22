@@ -4,18 +4,10 @@ import ReactDOM from "react-dom";
 import { act } from "react-dom/test-utils";
 import pretty from "pretty";
 import { BrowserRouter } from "react-router-dom";
+import initTest from "../../../utils/testUtils"
+import { container } from "../../../utils/testUtils"
 
-let container;
-
-beforeEach(() => {
-    container = document.createElement("div");
-    document.body.appendChild(container);
-});
-
-afterEach(() => {
-    document.body.removeChild(container);
-    container = null;
-});
+initTest();
 
 test('Renders Home page', () => {
     act(() => {
