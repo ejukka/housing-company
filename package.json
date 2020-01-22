@@ -34,7 +34,7 @@
     "redux-saga": "^1.1.3",
     "redux-saga-tester": "^1.0.627",
     "styled-components": "^4.4.1",
-    "typescript": "3.7.3"
+    "typescript": "3.7.5"
   },
   "scripts": {
     "start": "react-scripts start",
