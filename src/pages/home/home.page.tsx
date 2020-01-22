@@ -1,5 +1,6 @@
 import React from "react";
 import Menu from "../../components/menu/menu.component";
+import menuProps from "../../types/MenuProps";
 
 const config = {
   menuTitle1: `${process.env.REACT_APP_MENU_TITLE1}`,
@@ -8,21 +9,22 @@ const config = {
   menuTitle2Link: `${process.env.REACT_APP_MENU_TITLE2_LINK}`
 };
 
-const HomePage = () => (
-  <div className="container">
-    <Menu
-      title={config.menuTitle1}
-      imageUrl={config.menuTitle2Link}
-      size="400"
-      history=""
-    />
-    <Menu
-      title={config.menuTitle2}
-      imageUrl={config.menuTitle1Link}
-      size="100"
-      history=""
-    />
-  </div>
-);
+const getProps = (title: string, imageUrl: string): menuProps => {
+  return {
+    title: title,
+    imageUrl: imageUrl,
+    size: "400",
+    history: ""
+  };
+};
+
+const HomePage = () => {
+  return (
+    <div className="container">
+      <Menu {...getProps(config.menuTitle1, config.menuTitle1Link)} />
+      <Menu {...getProps(config.menuTitle2, config.menuTitle2Link)} />
+    </div>
+  );
+};
 
 export default HomePage;

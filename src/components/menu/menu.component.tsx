@@ -8,13 +8,15 @@ import {
   TitleH1,
   SubtitleSpan
 } from "./menu.component.styles";
+import menuProps from "../../types/MenuProps";
+import { History, LocationState } from "history";
 
 const config = {
   subtitle: `${process.env.REACT_APP_MENU_SUB_TITLE}`
 };
 
-const Menu = (props: any) => {
-  const handleClick = (history: any) => {
+const Menu = (props: menuProps) => {
+  const handleClick = (history: History<LocationState>) => {
     history.push("/apartments");
   };
 
@@ -35,4 +37,5 @@ const Menu = (props: any) => {
   );
 };
 
+// @ts-ignore
 export default withRouter(Menu);
