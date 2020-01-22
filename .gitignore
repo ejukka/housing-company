@@ -18,6 +18,7 @@
 .env_backup
 .env.local
 .env.test
+.env.test.backup
 .env.development.local
 .env.test.local
 .env.production.local

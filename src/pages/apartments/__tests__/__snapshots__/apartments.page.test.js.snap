@@ -51,7 +51,7 @@ exports[`Renders Apartments page 1`] = `
           >
             <div>
               <img
-                alt=""
+                alt="house b2 and b3"
                 src=""
               />
               <p
@@ -67,7 +67,23 @@ exports[`Renders Apartments page 1`] = `
           >
             <div>
               <img
-                alt=""
+                alt="house b2 and b3"
+                src=""
+              />
+              <p
+                className="legend"
+              >
+                house b2 and b3
+              </p>
+            </div>
+          </li>
+          <li
+            className="slide"
+            onClick={[Function]}
+          >
+            <div>
+              <img
+                alt="house b2 and b3"
                 src=""
               />
               <p
@@ -83,23 +99,7 @@ exports[`Renders Apartments page 1`] = `
           >
             <div>
               <img
-                alt=""
-                src=""
-              />
-              <p
-                className="legend"
-              >
-                
-              </p>
-            </div>
-          </li>
-          <li
-            className="slide"
-            onClick={[Function]}
-          >
-            <div>
-              <img
-                alt=""
+                alt="house b2 and b3"
                 src=""
               />
               <p
@@ -115,13 +115,13 @@ exports[`Renders Apartments page 1`] = `
           >
             <div>
               <img
-                alt=""
+                alt="house b2 and b3"
                 src=""
               />
               <p
                 className="legend"
               >
-                
+                house b2 and b3
               </p>
             </div>
           </li>
@@ -213,7 +213,7 @@ exports[`Renders Apartments page 1`] = `
             tabIndex={0}
           >
             <img
-              alt=""
+              alt="house b2 and b3"
               onLoad={[Function]}
               src=""
             />
@@ -227,7 +227,7 @@ exports[`Renders Apartments page 1`] = `
             tabIndex={0}
           >
             <img
-              alt=""
+              alt="house b2 and b3"
               src=""
             />
           </li>
@@ -240,7 +240,7 @@ exports[`Renders Apartments page 1`] = `
             tabIndex={0}
           >
             <img
-              alt=""
+              alt="house b2 and b3"
               src=""
             />
           </li>

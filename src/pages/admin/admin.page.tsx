@@ -1,6 +1,7 @@
 import React from "react";
 import { ListGroup } from "react-bootstrap";
 import { useSelector } from "react-redux";
+import userState from "../../types/UserState";
 
 const config = {
   column1: `${process.env.REACT_APP_ADMIN_COLUMN1_HEADER_TEXT}`,
@@ -14,7 +15,7 @@ const config = {
 };
 
 const AdminPage = () => {
-  const { currentUser } = useSelector((state: any) => state.user);
+  const { currentUser } = useSelector((state: userState) => state.user);
 
   if (currentUser) {
     return (
