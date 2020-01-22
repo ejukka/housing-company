@@ -1,0 +1,14 @@
+{
+  "presets": [
+    [
+      {  "presets": ["es2015"] },
+      "@babel/env",
+      "@babel/preset-typescript",
+      {
+        "targets": {
+          "node": "current",
+        },
+      },
+    ],
+  ],
+}

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders Header component 1`] = `
+"<div class=\\"container\\">
+  <div class=\\"sc-bdVaJa eskUMO\\"><img style=\\"background-image: url(link);\\" class=\\"background-image\\">
+    <div class=\\"sc-bwzfXH kXomTW\\">
+      <h1 class=\\"sc-htpNat hgjgiu\\">TEST TITLE</h1><span class=\\"sc-bxivhb fzOaMp\\">watch</span>
+    </div>
+  </div>
+</div>"
+`;
