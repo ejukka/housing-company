@@ -5,8 +5,9 @@ import { act } from "react-dom/test-utils";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import pretty from "pretty";
-import initTest from "../../../utils/testUtils"
-import { container } from "../../../utils/testUtils"
+import initTest from "../../../utils/testUtils";
+import { container } from "../../../utils/testUtils";
+import {adminConfig} from "../../../utils/config";
 
 initTest();
 
@@ -15,7 +16,7 @@ test('Renders Admin page', () => {
     act(() => {
         ReactDOM.render(
             <Provider store={store}>
-                <AdminPage />
+                <AdminPage props={adminConfig}/>
             </Provider>,
             container
         );

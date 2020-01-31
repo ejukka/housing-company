@@ -9,7 +9,7 @@ export const adminConfig: any = {
   list1_text: `${process.env.REACT_APP_ADMIN_LIST1_TEXT}`
 };
 
-export const apartMentsConfig: any = {
+export const apartmentsConfig: any = {
   img1: `${process.env.REACT_APP_APARTMENTS_IMG1}`,
   img1_ALT: `${process.env.REACT_APP_APARTMENTS_IMG1_ALT}`,
   img1_text: `${process.env.REACT_APP_APARTMENTS_IMG1_TEXT}`,

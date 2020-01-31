@@ -19,7 +19,7 @@ import { PersistGate } from "redux-persist/integration/react";
 import AdminPage from "./pages/admin/admin.page";
 import {
   adminConfig,
-  apartMentsConfig,
+  apartmentsConfig,
   aboutPageConfig,
   homePageConfig
 } from "./utils/config";
@@ -49,7 +49,7 @@ const App = () => {
             <Route
               exact
               path="/apartments"
-              component={() => <ApartmentsPage props={apartMentsConfig} />}
+              component={() => <ApartmentsPage props={apartmentsConfig} />}
             />
             <Route exact path="/signin" component={SignIn} />
             <Route
