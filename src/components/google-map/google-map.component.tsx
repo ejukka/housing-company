@@ -1,17 +1,13 @@
 import React from "react";
 
 import { withGoogleMap, GoogleMap } from "react-google-maps";
-
-const config = {
-  latitude: `${process.env.REACT_APP_LATITUDE}`,
-  longitude: `${process.env.REACT_APP_LONGITUDE}`
-};
+import { googleMapconfig } from "../../utils/config";
 
 const GoogleMapResult = withGoogleMap(props => (
   <GoogleMap
     defaultCenter={{
-      lat: parseInt(config.latitude),
-      lng: parseInt(config.longitude)
+      lat: parseInt(googleMapconfig.latitude),
+      lng: parseInt(googleMapconfig.longitude)
     }}
     defaultZoom={13}
   />

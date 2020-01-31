@@ -46,3 +46,8 @@ export const homePageConfig: any = {
   menuTitle2: `${process.env.REACT_APP_MENU_TITLE2}`,
   menuTitle2Link: `${process.env.REACT_APP_MENU_TITLE2_LINK}`
 };
+
+export const googleMapconfig = {
+  latitude: `${process.env.REACT_APP_LATITUDE}`,
+  longitude: `${process.env.REACT_APP_LONGITUDE}`
+};
