@@ -2,13 +2,6 @@ import React from "react";
 import Menu from "../../components/menu/menu.component";
 import menuProps from "../../types/MenuProps";
 
-const config = {
-  menuTitle1: `${process.env.REACT_APP_MENU_TITLE1}`,
-  menuTitle1Link: `${process.env.REACT_APP_MENU_TITLE1_LINK}`,
-  menuTitle2: `${process.env.REACT_APP_MENU_TITLE2}`,
-  menuTitle2Link: `${process.env.REACT_APP_MENU_TITLE2_LINK}`
-};
-
 const getProps = (title: string, imageUrl: string): menuProps => {
   return {
     title: title,
@@ -18,7 +11,8 @@ const getProps = (title: string, imageUrl: string): menuProps => {
   };
 };
 
-const HomePage = () => {
+const HomePage = (props: any) => {
+  const { ...config } = props.props;
   return (
     <div className="container">
       <Menu {...getProps(config.menuTitle1, config.menuTitle1Link)} />

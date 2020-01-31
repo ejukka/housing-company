@@ -65,13 +65,24 @@ const App = () => {
     list5_text: `${process.env.REACT_APP_ABOUT_LIST5_TEXT}`
   };
 
+  const homePageConfig = {
+    menuTitle1: `${process.env.REACT_APP_MENU_TITLE1}`,
+    menuTitle1Link: `${process.env.REACT_APP_MENU_TITLE1_LINK}`,
+    menuTitle2: `${process.env.REACT_APP_MENU_TITLE2}`,
+    menuTitle2Link: `${process.env.REACT_APP_MENU_TITLE2_LINK}`
+  };
+
   return (
     <PersistGate persistor={persistor}>
       <Provider store={store}>
         <div>
           <Router>
             <Header />
-            <Route exact path="/" component={HomePage} />
+            <Route
+              exact
+              path="/"
+              component={() => <HomePage props={homePageConfig} />}
+            />
             <Route exact path="/history" component={HistoryPage} />
             <Route
               exact
