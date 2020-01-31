@@ -77,3 +77,7 @@ export const headerConfig = {
   sign_in_text: `${process.env.REACT_APP_APP_sign_in_text}`,
   sign_out_text: `${process.env.REACT_APP_APP_sign_out_text}`
 };
+
+export const menuConfig = {
+  subtitle: `${process.env.REACT_APP_MENU_SUB_TITLE}`
+};

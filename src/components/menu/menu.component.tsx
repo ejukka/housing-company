@@ -10,10 +10,7 @@ import {
 } from "./menu.component.styles";
 import menuProps from "../../types/MenuProps";
 import { History, LocationState } from "history";
-
-const config = {
-  subtitle: `${process.env.REACT_APP_MENU_SUB_TITLE}`
-};
+import { menuConfig } from "../../utils/config";
 
 const Menu = (props: menuProps) => {
   const handleClick = (history: History<LocationState>) => {
@@ -30,7 +27,7 @@ const Menu = (props: menuProps) => {
         />
         <ItemsContent>
           <TitleH1>{props.title.toUpperCase()}</TitleH1>
-          <SubtitleSpan>{config.subtitle}</SubtitleSpan>
+          <SubtitleSpan>{menuConfig.subtitle}</SubtitleSpan>
         </ItemsContent>
       </MenuContainer>
     </Container>
