@@ -81,3 +81,7 @@ export const headerConfig = {
 export const menuConfig = {
   subtitle: `${process.env.REACT_APP_MENU_SUB_TITLE}`
 };
+
+export const indexConfig = {
+  title: `${process.env.REACT_APP_DOCUMENT_TITLE}`
+};

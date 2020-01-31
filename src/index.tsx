@@ -7,6 +7,8 @@ import { PersistGate } from "redux-persist/integration/react";
 
 import { store, persistor } from "./redux/store";
 
+import { indexConfig } from "./utils/config";
+
 require("dotenv").config();
 ReactDOM.render(
   <Provider store={store}>
@@ -17,8 +19,4 @@ ReactDOM.render(
   document.getElementById("root")
 );
 
-const config = {
-  title: `${process.env.REACT_APP_DOCUMENT_TITLE}`
-};
-
-document.title = config.title;
+document.title = indexConfig.title;
