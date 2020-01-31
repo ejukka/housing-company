@@ -6,6 +6,8 @@ import { signInStart, signOutStart } from "../../redux/user.action";
 
 import { useDispatch, useSelector } from "react-redux";
 
+import { headerConfig } from "../../utils/config";
+
 const getHeaderText = (currentUser: string, config: any) => {
   if (!currentUser) {
     return config.headerText;
@@ -14,38 +16,10 @@ const getHeaderText = (currentUser: string, config: any) => {
   }
 };
 
-const getTexts = () => {
-  return {
-    headerText: `${process.env.REACT_APP_APP_headerText}`,
-    headerTextAdmin: `${process.env.REACT_APP_APP_headerTextAdmin}`,
-    link1: `${process.env.REACT_APP_APP_link1}`,
-    link1Text: `${process.env.REACT_APP_APP_link1Text}`,
-    link2: `${process.env.REACT_APP_APP_link2}`,
-    link2Text: `${process.env.REACT_APP_APP_link2Text}`,
-    link3: `${process.env.REACT_APP_APP_link3}`,
-    link3Text: `${process.env.REACT_APP_APP_link3Text}`,
-    link4: `${process.env.REACT_APP_APP_link4}`,
-    link4Text: `${process.env.REACT_APP_APP_link4Text}`,
-    link5: `${process.env.REACT_APP_APP_link5}`,
-    link5Text: `${process.env.REACT_APP_APP_link5Text}`,
-    link6: `${process.env.REACT_APP_APP_link6}`,
-    link6Text: `${process.env.REACT_APP_APP_link6Text}`,
-    admin_page_link: `${process.env.REACT_APP_APP_admin_page_link_text}`,
-    admin_page_link_text: `${process.env.REACT_APP_APP_admin_page_link}`,
-
-    header_text1: `${process.env.REACT_APP_APP_header_text1}`,
-    header_text2: `${process.env.REACT_APP_APP_header_text2}`,
-    header_text3: `${process.env.REACT_APP_APP_header_text3}`,
-    header_text4: `${process.env.REACT_APP_APP_header_text4}`,
-    sign_in_text: `${process.env.REACT_APP_APP_sign_in_text}`,
-    sign_out_text: `${process.env.REACT_APP_APP_sign_out_text}`
-  };
-};
-
 const Header = () => {
   const dispatch = useDispatch();
   const { currentUser } = useSelector((state: any) => state.user);
-  const text = getTexts();
+  const text = headerConfig;
   return (
     <Container>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
