@@ -3,19 +3,9 @@ import { ListGroup } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import userState from "../../types/UserState";
 
-const config = {
-  column1: `${process.env.REACT_APP_ADMIN_COLUMN1_HEADER_TEXT}`,
-  column2: `${process.env.REACT_APP_ADMIN_COLUMN2_HEADER_TEXT}`,
-  column3: `${process.env.REACT_APP_ADMIN_COLUMN3_HEADER_TEXT}`,
-  column1_text: `${process.env.REACT_APP_ADMIN_COLUMN1_HEADER_TEXT2}`,
-  column2_text: `${process.env.REACT_APP_ADMIN_COLUMN2_HEADER_TEXT2}`,
-  column3_text: `${process.env.REACT_APP_ADMIN_COLUMN3_HEADER_TEXT2}`,
-  list1: `${process.env.REACT_APP_ADMIN_LIST1}`,
-  list1_text: `${process.env.REACT_APP_ADMIN_LIST1_TEXT}`
-};
-
-const AdminPage = () => {
+const AdminPage = (props: any) => {
   const { currentUser } = useSelector((state: userState) => state.user);
+  const { ...config } = props.props;
 
   if (currentUser) {
     return (
