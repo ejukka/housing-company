@@ -9,26 +9,38 @@ exports[`Renders About page 1`] = `
   >
     <div
       className="col-sm"
-    />
+    >
+      text1
+    </div>
     <div
       className="col-sm"
-    />
+    >
+      text2
+    </div>
     <div
       className="col-sm"
-    />
+    >
+      text3
+    </div>
   </div>
   <div
     className="row"
   >
     <div
       className="col-sm"
-    />
+    >
+      text4
+    </div>
     <div
       className="col-sm"
-    />
+    >
+      text5
+    </div>
     <div
       className="col-sm"
-    />
+    >
+      text7
+    </div>
   </div>
   <br />
   <div
@@ -42,9 +54,12 @@ exports[`Renders About page 1`] = `
       onClick={[Function]}
     >
       <a
+        href="https://duckduckgo.com/"
         rel="noopener noreferrer"
         target="_blank"
-      />
+      >
+        list1
+      </a>
     </div>
     <div
       className="list-group-item"
@@ -53,9 +68,12 @@ exports[`Renders About page 1`] = `
       onClick={[Function]}
     >
       <a
+        href="https://duckduckgo.com/"
         rel="noopener noreferrer"
         target="_blank"
-      />
+      >
+        list2
+      </a>
     </div>
     <div
       className="list-group-item"
@@ -64,9 +82,12 @@ exports[`Renders About page 1`] = `
       onClick={[Function]}
     >
       <a
+        href="list3"
         rel="noopener noreferrer"
         target="_blank"
-      />
+      >
+        list3
+      </a>
     </div>
     <div
       className="list-group-item"
@@ -75,9 +96,12 @@ exports[`Renders About page 1`] = `
       onClick={[Function]}
     >
       <a
+        href="https://duckduckgo.com/"
         rel="noopener noreferrer"
         target="_blank"
-      />
+      >
+        list4
+      </a>
     </div>
     <div
       className="list-group-item"
@@ -86,9 +110,12 @@ exports[`Renders About page 1`] = `
       onClick={[Function]}
     >
       <a
+        href="https://duckduckgo.com/"
         rel="noopener noreferrer"
         target="_blank"
-      />
+      >
+        list5
+      </a>
     </div>
   </div>
   <div>
