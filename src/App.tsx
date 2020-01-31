@@ -34,6 +34,18 @@ const App = () => {
     list1_text: `${process.env.REACT_APP_ADMIN_LIST1_TEXT}`
   };
 
+  const apartMentsConfig = {
+    img1: `${process.env.REACT_APP_APARTMENTS_IMG1}`,
+    img1_ALT: `${process.env.REACT_APP_APARTMENTS_IMG1_ALT}`,
+    img1_text: `${process.env.REACT_APP_APARTMENTS_IMG1_TEXT}`,
+    img2: `${process.env.REACT_APP_APARTMENTS_IMG2}`,
+    img2_ALT: `${process.env.REACT_APP_APARTMENTS_IMG2_ALT}`,
+    img2_text: `${process.env.REACT_APP_APARTMENTS_IMG2_TEXT}`,
+    img3: `${process.env.REACT_APP_APARTMENTS_IMG3}`,
+    img3_ALT: `${process.env.REACT_APP_APARTMENTS_IMG3_ALT}`,
+    img3_text: `${process.env.REACT_APP_APARTMENTS_IMG3_TEXT}`
+  };
+
   return (
     <PersistGate persistor={persistor}>
       <Provider store={store}>
@@ -43,7 +55,11 @@ const App = () => {
             <Route exact path="/" component={HomePage} />
             <Route exact path="/history" component={HistoryPage} />
             <Route exact path="/about" component={AboutPage} />
-            <Route exact path="/apartments" component={ApartmentsPage} />
+            <Route
+              exact
+              path="/apartments"
+              component={() => <ApartmentsPage props={apartMentsConfig} />}
+            />
             <Route exact path="/signin" component={SignIn} />
             <Route
               exact
