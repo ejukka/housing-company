@@ -44,7 +44,8 @@
     "prettier": "prettier --parser typescript --single-quote -- --write \"src/**/*.{ts,tsx}\"",
     "eject": "react-scripts eject",
     "create": "node start.js",
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "cypress:run": "npx cypress run"
   },
   "eslintConfig": {
     "extends": "react-app"
