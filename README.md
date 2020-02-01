@@ -8,23 +8,21 @@ this is Demo project
 
 ![npm](https://img.shields.io/node/v/11) 
 
-
 #### Prerequisite 
 
- - Yarn 
- - Node
- - Google maps API key
- - Firebase API Key
+ - [Yarn](https://yarnpkg.com/getting-started/install) 
+ - [Node](https://nodejs.org/en/download/)
+ - [Google maps API key](https://developers.google.com/maps/documentation/javascript/get-api-key)
+ - [Firebase API Key](https://developers.google.com/maps/documentation/javascript/get-api-key)
 
 ### environment setup
--  ```yarn install```
+- ```yarn install```
 - ```yarn run create```
-    - it will create .env-file on the root of the project 
+    - it will create `.env`-file on the root of the project 
     - place your Google API KEY on ```REACT_APP_GOOGLE_MAPS_KEY=this_is_my_seacred_api_key```
-    - ìt will also create script.js file on public-folder.
-    - Add your Google API key also on created script.js-file.
+    - ìt will also create `script.js`-file on `public-folder`.
+    - Add your Google API key also on created `script.js`-file.
     
-
 ##### Configure following firebase ids to your .evn file:
 ```
 REACT_APP_API_KEY=apikey,
@@ -41,4 +39,13 @@ REACT_APP_APP_ID=test
 
 
 ### start project
-yarn start
+ ```yarn start```
+
+### unit testing
+  ```yarn jest```
+
+### integration testing
+ - ```yarn start```
+ - ```yarn cypress run```
+
+
