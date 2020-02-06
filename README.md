@@ -6,7 +6,9 @@ this is demo project for housing company
 this is Demo project
 
 
-![npm](https://img.shields.io/node/v/11) 
+[![Build Status](https://travis-ci.com/ejukka/housing-company.svg?branch=master)](https://travis-ci.com/ejukka/housing-company)
+ ![npm](https://img.shields.io/node/v/11)  [![Cypress.io tests](https://img.shields.io/badge/cypress.io-tests-green.svg?style=flat-square)](https://cypress.io)
+
 
 #### Prerequisite 
 
