@@ -1,13 +1,11 @@
 module.exports = {
+  setupFiles: ['./test/jest.setup.js'],
+  clearMocks: true,
   preset: 'ts-jest',
   setupFilesAfterEnv: ['./src/__mocks__/firebase.utils.mocks'],
   automock: false,
   collectCoverage: true,
-  roots: [
-    "<rootDir>/src",
-    "<rootDir>/tests"
-  ],
-  transform: {
-    "^.+\\.tsx?$": "ts-jest"
-  },
+  testMatch: [
+    "**/__tests__/**/*.[jt]s?(x)"
+  ]
 };
