@@ -40,3 +40,4 @@ public/script.js
 public/script2.js
 
 cypress/videos
+cypress/screenshots/
