@@ -1,14 +1,13 @@
+[![Build Status](https://travis-ci.com/ejukka/housing-company.svg?branch=master)](https://travis-ci.com/ejukka/housing-company)
+ ![npm](https://img.shields.io/node/v/11)  [![Cypress.io tests](https://img.shields.io/badge/cypress.io-tests-green.svg?style=flat-square)](https://cypress.io)
+
+
 # housing company
 
 this is demo project for housing company
 
 ## Motivation
 this is Demo project
-
-
-[![Build Status](https://travis-ci.com/ejukka/housing-company.svg?branch=master)](https://travis-ci.com/ejukka/housing-company)
- ![npm](https://img.shields.io/node/v/11)  [![Cypress.io tests](https://img.shields.io/badge/cypress.io-tests-green.svg?style=flat-square)](https://cypress.io)
-
 
 #### Prerequisite 
 
