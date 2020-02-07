@@ -19,8 +19,6 @@ before_install:
 
 jobs:
   include:
-    - stage: linting
-      script: yarn prettier
     - stage: unit testing
       script: yarn test
     - stage: integration testing
