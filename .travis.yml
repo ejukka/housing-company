@@ -11,4 +11,4 @@ jobs:
     - stage: linting
       script: yarn prettier
     - stage: unit testing
-      script: yarn test -u
+      script: yarn test
