@@ -10,8 +10,6 @@ cache:
   directories:
     # we also need to cache folder with Cypress binary
     - ~/.cache
-    - cache/Cypress
-    - node_modules
 
 before_install:
   - yarn install
