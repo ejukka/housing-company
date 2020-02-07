@@ -4,10 +4,11 @@ cache: yarn
 
 before_install:
   - yarn install
+  - yarn run create
 
 jobs:
   include:
     - stage: linting
       script: yarn prettier
     - stage: unit testing
-      script: yarn test
+      script: yarn test -u
