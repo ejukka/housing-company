@@ -1,6 +1,16 @@
 language: node_js
 node_js: '12'
-cache: yarn
+
+addons:
+  apt:
+    packages:
+      - libgconf-2-4
+
+cache:
+  directories:
+    # we also need to cache folder with Cypress binary
+    - ~/.cache
+    - node_modules
 
 before_install:
   - yarn install
