@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
 export const MenuContainer = styled.div`
-  min-width: 10%;
+  min-width: 450px;
   height: 540px;
   flex: 2 2 auto;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1px solid black;
-  margin: 0 7.5px 15px;
+  margin: 0 -15px 15px;
   overflow: hidden;
 
   &:hover {
@@ -25,11 +25,13 @@ export const MenuContainer = styled.div`
   }
 
   .background-image {
+    overflow: hidden;
     width: 100%;
-    height: 100%;
+    height: 200%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    min-width: 10%;
   }
 `;
 
@@ -49,7 +51,7 @@ export const ItemsContent = styled.div`
 export const TitleH1 = styled.h1`
   font-weight: bold;
   margin-bottom: 6px;
-  font-size: 22px;
+  font-size: 12px;
   color: #4a4a4a;
 `;
 

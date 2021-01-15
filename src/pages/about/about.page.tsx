@@ -29,7 +29,7 @@ const AboutPage = (props: any) => {
           </a>
         </ListGroup.Item>
         <ListGroup.Item>
-          <a target="_blank" rel="noopener noreferrer" href={config.list3_text}>
+          <a target="_blank" rel="noopener noreferrer" href={config.list3}>
             {config.list3_text}
           </a>
         </ListGroup.Item>
@@ -44,12 +44,12 @@ const AboutPage = (props: any) => {
           </a>
         </ListGroup.Item>
       </ListGroup>
-      <div>
-        <GoogleMapResult
-          containerElement={<div style={{ height: `500px`, width: "500px" }} />}
-          mapElement={<div style={{ height: `100%` }} />}
-        />
-      </div>
+      {/*<div>*/}
+      {/*  <GoogleMapResult*/}
+      {/*    containerElement={<div style={{ height: `500px`, width: "500px" }} />}*/}
+      {/*    mapElement={<div style={{ height: `100%` }} />}*/}
+      {/*  />*/}
+      {/*</div>*/}
     </div>
   );
 };
