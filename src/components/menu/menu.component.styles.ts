@@ -37,6 +37,7 @@ export const MenuContainer = styled.div`
 
 export const ItemsContent = styled.div`
   height: 70px;
+  min-width: 70px;
   padding: 0 25px;
   display: flex;
   flex-direction: column;
